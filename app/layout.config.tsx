@@ -1,4 +1,4 @@
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 
 /**
  * Shared layout configurations
@@ -9,13 +9,6 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
  */
 export const baseOptions: BaseLayoutProps = {
   nav: {
-    title: 'My App',
+    title: "AstroDX",
   },
-  links: [
-    {
-      text: 'Documentation',
-      url: '/docs',
-      active: 'nested-url',
-    },
-  ],
 };
