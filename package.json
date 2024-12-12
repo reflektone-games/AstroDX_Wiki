@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
@@ -17,6 +20,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.7",
     "@types/mdx": "^2.0.13",
     "@types/node": "22.10.1",
     "@types/react": "^19.0.1",
