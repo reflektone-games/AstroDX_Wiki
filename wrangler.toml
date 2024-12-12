@@ -17,4 +17,3 @@ compatibility_flags = [ "nodejs_compat " ]
 
 [env.production.placement]
 mode = "smart"
-
