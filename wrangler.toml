@@ -3,6 +3,12 @@ name = "astrodx-wiki"
 pages_build_output_dir = ".out"
 compatibility_date = "2024-12-11"
 
+[vars]
+NODE_VERSION = 22.12.0
+
+[env.vars]
+NODE_VERSION = 22.12.0
+
 [placement]
 mode = "off"
 
@@ -12,5 +18,3 @@ compatibility_flags = [ "nodejs_compat " ]
 [env.production.placement]
 mode = "smart"
 
-[vars]
-NODE_VERSION = 22.12.0
