@@ -1,0 +1,166 @@
+---
+title: 安卓
+---
+
+![AstroDX Android Installation Banner](content/media/androidguidebanner.webp)
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube-nocookie.com/embed/9rr9Ygmyymw?si=tTR3jRaRGG2r56bf"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+></iframe>
+如果文档不是你的风格的话，在这里可以查看[视频教程](https://www.youtube-nocookie.com/embed/9rr9Ygmyymw?si=tTR3jRaRGG2r56bf)
+
+# 安装 APK
+
+<Steps>
+<Step>
+### 下载安装包
+
+通过浏览器导航到 [AstroDX 的 GitHub 发布页面](https://github.com/2394425147/maipaddx/releases)。
+
+找到最新的版本（编写时最新版为 v2.0.0.beta.2.patch.c），并展开 Assets 栏目，单击.apk 文件即可下载。
+
+</Step>
+<Step>
+### 安装
+
+在安装 AstroDX（或任意第三方软件）时，多数安卓设备会提示因安全问题，无法安装未识别的应用。
+
+这一问题可以通过 `⚙️手机设置` 中给浏览器允许权限解决。
+
+</Step>
+
+<Step>
+### 初始化 AstroDX
+
+在安装 AstroDX 之后，请在导入曲目前先启动游戏一次，让游戏正常初始化，完成文件系统的配置。
+
+</Step>
+</Steps>
+
+**第一次打开游戏没有任何内置曲目哦！** 我们会在下面的部分介绍获取曲目的办法.
+
+# 安装曲目
+
+<Callout>
+  如果你在用2.0.0.beta.2.patch.c以前的版本，如pre-beta或者更早，请
+</Callout>
+
+### **Import via ADX archive** **(Recommended, Beta 2 Patch 4 and later)**
+
+This is the primary way to install levels, and it’s incredibly easy to get started.
+
+<Steps>
+
+<Step>
+  ### Rename your zip file Any given `.zip` file of a level or multiple levels
+  can be **renamed** into a `.adx` file.
+</Step>
+
+<Step>
+  ### Open with... > AstroDX On supported devices, tap on the file in any file
+  manager, and select `Open with… > AstroDX`
+</Step>
+
+<Step>
+  ### Profit AstroDX will automatically install levels for you [depending on
+  what the archive contains](https://www.notion.so/ADX-Archive-Det).
+</Step>
+
+</Steps>
+
+<Callout title="On some devices, (for example Xiaomi or some Samsung devices), your file manager may not offfer the option to open with AstroDX." type="warn">
+
+Try one of these options:
+[**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver&hl=en) /
+[**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files&pcampaignid=web_share)
+
+</Callout>
+
+Rename any `.adx` file back into `.zip` to extract it as usual.
+
+### Manual import
+
+Installing levels like older versions is still supported.
+
+To install collections, you’ll need to create and author a manifest file. Learn more about it here:
+
+## Updating from older versions
+
+AstroDX automatically transfers your levels, collections and scores to the new version.
+
+If it fails, a backup file is available in the root folder of AstroDX, and you can open up a thread in the [#help](https://discord.com/channels/892807792996536453/1017394299933044847) forums.
+
+# FAQ (Fully Anticipated Questions)
+
+<Accordions>
+	<Accordion title="I've put the .rar/.zip file into `/levels`, but it's still not working!">
+
+That's the old way of doing things. It'll still technically work for solo levels, but collections are now done differently. Arguably, better.
+
+    If you’re using 2.0 Beta 2 Patch 4 or later, you’re probably better off using [the .adx archive method](https://www.notion.so/Installation-Guide-for-Android-3f2ec5041ad5413ab45500472bb4ceba?pvs=21).
+    </Accordion>
+
+    <Accordion title="Is there a way to turn off Notifications? I keep on sliding it down.">
+
+    Fortunately for you, there is a Guided Access-like feature in Android.
+
+    It’s called Pin app, and how you turn it on depends on what device you are using.
+
+    Except if you’re using a Xiaomi. If you are, you’re SOL. Sorry.
+    </Accordion>
+
+<Accordion title="I've put the mv.mp4 (or bg.mp4) file into the folder, but it isn't playing!">
+
+    AstroDX only detects `pv.mp4` for video files. `mv.mp4` is what is needed to run the video in [Majdata](https://rentry.org/maiguide).
+    </Accordion>
+
+<Accordion title="Is there SD card support?">
+
+    Unfortunately, not at this time. It is surprisingly complicated to implement support for SD cards.
+
+    Alternatively, you can *try* to find a way to make symlinks inside of Android (since it is basically Linux). I haven’t found a way to make it work yet. Good luck!
+    </Accordion>
+
+<Accordion title="Why isn't the game on the Google Play Store?">
+
+    We do not yet qualify for deployment on the Play Store, and we want to be a fully fleshed game before we do so.
+
+    Also, we might be on other app marketplaces instead of the Play Store due to exorbitant rates. It's not free.
+    </Accordion>
+
+<Accordion title="Why do you need to go through the hassle of having to go to the weird directory?">
+
+    Due to limitations within Android, apps are only allowed to access a specific subset of files.
+
+    Google's reason for this was security, but if we're being real if the apps wanted access outside of the Scoped Storage there are a plethora of workarounds available using archaic permissions. Good job, Google.
+    </Accordion>
+
+<Accordion title="[2.0 Beta] Why are we changing the storage layout?">
+
+    As you might have known, in previous versions of AstroDX, levels can be either put in the top-level (Directly inside the `levels` folder), or you can put one or more levels inside another named folder to make a **collection**. This made it easy to customize collections straight in the file system, though it also introduces some interesting problems.
+
+    **You can’t use the same level in multiple collections.** Since collections exist as folders, it’s difficult to find a way to put the same level inside many folders at the same time. Even if it’s possible, managing shortcuts and links will certainly be difficult when it comes to deleting a level or moving a level elsewhere.
+
+    **Multiple levels can have the same name.** Although we use folders to group levels, the levels are expanded into a singular list in the game. This makes it possible to have two or more folders of the same name, creating a key collision in the game’s dictionary of levels. And when you’re adding levels to a sea of folders, it’s difficult to identify whether a folder of the same name already exists.
+
+    By using an alternative way to represent the collections, though we made it slightly more complex to edit collection data (which we’re working on adding an in-game collections manager to fix), we’re able to fix the issues mentioned above.
+
+</Accordion>
+</Accordions>
+
+### **My god, I do not want to read any of that.**
+
+Cope, seethe, mald, and ping @davidscann in the AstroDX Discord server.
+**Just make sure to tell me that you’ve decided not to read the guide first.**
+
+<p className="font-serif text-center italic text-xl"> ✨ made with love 💖 </p>

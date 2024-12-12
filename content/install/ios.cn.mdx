@@ -1,24 +1,30 @@
 ---
-title: 🇬🇧 Installation Guide for iOS/iPadOS
+title: iOS/iPadOS
 ---
-import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
-import { Step, Steps } from 'fumadocs-ui/components/steps';
-import { Card, Cards } from 'fumadocs-ui/components/card';
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Card, Cards } from "fumadocs-ui/components/card";
 
 ![Guide banner with text that says: AstroDX Installation Guide (iOS / iPadOS Edition)](content/media/adx_iosguide.webp)
+
 <Callout title="Translator needed! 🤓">
-	Those who want to copy this guide and translate it to your native language so that people who do not know English can still enjoy this game;
- 	Please contact me @davidscann in the [AstroDX Discord server](https://sht.moe/astrodx), and I'll copy this template and hand it over to you (as well as clarifications if you need it). Thank you!
+  Those who want to copy this guide and translate it to your native language so
+  that people who do not know English can still enjoy this game; Please contact
+  me @davidscann in the [AstroDX Discord server](https://sht.moe/astrodx), and
+  I'll copy this template and hand it over to you (as well as clarifications if
+  you need it). Thank you!
 </Callout>
 
 # App installation
+
 Here's how you can install the app.
 
 <Steps>
 
 <Step>
-### Download TestFlight
-You'll need to download the [TestFlight app](https://apps.apple.com/ca/app/testflight/id899247664).
+  ### Download TestFlight You'll need to download the [TestFlight
+  app](https://apps.apple.com/ca/app/testflight/id899247664).
 </Step>
 
 <Step>
@@ -49,7 +55,8 @@ You'll be able to find the links in our [Discord server](https://sht.moe/astrodx
 	</Card>
 	</Cards>
 
-	However, you'll be missing out on live updates for when slots free up. Your choice. ¯\\\_(ツ)_/¯
+    However, you'll be missing out on live updates for when slots free up. Your choice. ¯\\\_(ツ)_/¯
+
 </Accordion>
 </Accordions>
 </Step>
@@ -62,18 +69,22 @@ Once the app is finished downloading, launch it once to initialise the game. Thi
 **There won’t be any songs by default!** That’s ok, we’ll get songs later **in the next section**.
 
 # Installing Levels
+
 ### Where are the charts?
+
 Let's get this out of the way.
+
 <Cards>
-<Card
-title="Chart download where?"
-href="https://discord.com/channels/892807792996536453/1081048213185900584"
->
-The question you've all been waiting for. Maybe. Probably.
-</Card>
+  <Card
+    title="Chart download where?"
+    href="https://discord.com/channels/892807792996536453/1081048213185900584"
+  >
+    The question you've all been waiting for. Maybe. Probably.
+  </Card>
 </Cards>
 
 Here's how you can put those levels into your game.
+
 <Steps>
 <Step>
 ### Navigating to the directory
@@ -85,14 +96,16 @@ For Mac OS users, I assume you can just AirDrop the files to your device.
 
 I don't have a Mac myself, so I can't show you how, but it should be possible.
 
-	For Windows and Linux users, I recommend heading to [this section](#localsend-an-open-source-alternative-to-airdrop) where I go into detail how to transfer files efficiently to i[Pad]OS.
-	</Callout>
+    For Windows and Linux users, I recommend heading to [this section](#localsend-an-open-source-alternative-to-airdrop) where I go into detail how to transfer files efficiently to i[Pad]OS.
+    </Callout>
+
 </Step>
 <Step>
 ### Installing the charts
 - The new AstroDX update has made installing new charts simultaneously simpler but also more complex. You'll see what I mean.
 
- **For the purpose of this guide, a `collection` is basically a folder of charts. You'll be familiar with this structure.** `24. PRiSM/Chronomia`
+**For the purpose of this guide, a `collection` is basically a folder of charts. You'll be familiar with this structure.** `24. PRiSM/Chronomia`
+
 <Accordions>
 <Accordion
 title="Here's how you install new charts and collections:">
@@ -103,12 +116,13 @@ title="Here's how you install new charts and collections:">
 	<Step>
 	Rename that `.zip` file and change the extension to `.adx`.
 
-		<p className="text-sm opacity-50"> For example, `24. PRiSM.zip` now becomes `24. PRiSM.adx`. Same goes for single charts. </p>
-	</Step>
-	<Step>
-	Move that .adx file into the `AstroDX` folder, located in your Files.
+    	<p className="text-sm opacity-50"> For example, `24. PRiSM.zip` now becomes `24. PRiSM.adx`. Same goes for single charts. </p>
+    </Step>
+    <Step>
+    Move that .adx file into the `AstroDX` folder, located in your Files.
 
-	**No, not `levels`.**
+    **No, not `levels`.**
+
 </Step>
 </Steps>
 </Accordion>
@@ -118,14 +132,15 @@ title="Here's how you install new charts and collections:">
 </Steps>
 
 If you want to change the collection details, like say add a new single chart into a collection, it becomes a bit more complicated.
-<Callout
-title="Do you want to modify your collections further?"
->
-**Skip over this next section** (or even exit the guide, because you're done) if you're uninterested in changing anything.
+
+<Callout title="Do you want to modify your collections further?">
+  **Skip over this next section** (or even exit the guide, because you're done)
+  if you're uninterested in changing anything.
 </Callout>
-Inside of your `AstroDX` folder, you will find a `collections` folder and a `levels` folder.
-	- The `collections` folder ONLY stores information about the individual collections, located in subfolders.
-	- The `levels` folder ONLY stores files that are related to your charts.
+Inside of your `AstroDX` folder, you will find a `collections` folder and a `levels`
+folder. - The `collections` folder ONLY stores information about the individual collections,
+located in subfolders. - The `levels` folder ONLY stores files that are related to
+your charts.
 
 If you want to modify a collection, say to add a chart into one, you'll have to go into that subfolder and change information about the `manifest.json` file.
 
@@ -135,40 +150,56 @@ In the `manifest.json` file, you will have this format. Reading this should give
 
 ```json
 {
-    "name": "Collection name",
-    "id": null, // you can ignore this
-    "serverUrl": null, // you can ignore this
-    "levelIds": ["Each item here", "is a folder inside", "the levels folder"]
+  "name": "Collection name",
+  "id": null, // you can ignore this
+  "serverUrl": null, // you can ignore this
+  "levelIds": ["Each item here", "is a folder inside", "the levels folder"]
 }
 ```
+
 Exactly as formatted, that's how a `manifest.json` file works.
 
 #### LocalSend – an open source alternative to AirDrop
+
 This section is basically quintessential if you want to transfer files from your PC to your iPhone / iPad (unless it's a Mac, in which case just use AirDrop)
 
 Download LocalSend on both your PC and your device.
+
 <Cards>
-<Card
-title="App Store"
-href="https://apps.apple.com/us/app/localsend/id1661733229"
->
-</Card>
-<Card
-title="Official Website for PC Download"
-href="https://localsend.org/"
->
-</Card>
+  <Card
+    title="App Store"
+    href="https://apps.apple.com/us/app/localsend/id1661733229"
+  ></Card>
+  <Card
+    title="Official Website for PC Download"
+    href="https://localsend.org/"
+  ></Card>
 </Cards>
 Make sure that both devices are on the same WiFi network.
 
 Keep the LocalSend app open on your mobile device. On your PC:
+
 <Steps>
-<Step> Open the Send menu. </Step>
-<Step> Choose "File", and select the `.adx` file that includes your charts. </Step>
-<Step> Your iPhone or iPad should be in this menu as well, with a codename. Click on the name. </Step>
-<Step> Check your device. It should now have a prompt asking you if you want to Accept the files. Of course, Accept. </Step>
-<Step> The files should now be in your Files app, under `LocalSend`. </Step>
-<Step> Just move the transferred `.adx` file to `AstroDX`, and you're done! </Step>
+  <Step> Open the Send menu. </Step>
+  <Step>
+    {" "}
+    Choose "File", and select the `.adx` file that includes your charts.{" "}
+  </Step>
+  <Step>
+    {" "}
+    Your iPhone or iPad should be in this menu as well, with a codename. Click on
+    the name.{" "}
+  </Step>
+  <Step>
+    {" "}
+    Check your device. It should now have a prompt asking you if you want to Accept
+    the files. Of course, Accept.{" "}
+  </Step>
+  <Step> The files should now be in your Files app, under `LocalSend`. </Step>
+  <Step>
+    {" "}
+    Just move the transferred `.adx` file to `AstroDX`, and you're done!{" "}
+  </Step>
 </Steps>
 Just pop into the game and enjoy AstroDX.
 
@@ -191,12 +222,12 @@ Just pop into the game and enjoy AstroDX.
     <Accordion
     title="Information regarding file compatibility"
     >
-	I couldn't phrase the question right, so I'm just gonna dump this info here.
+    I couldn't phrase the question right, so I'm just gonna dump this info here.
 
-	The officially supported types of codecs for AstroDX on iOS:
-		- **Video:** H.264
-		- **Audio:** OGG Vorbis (with .ogg extension) **OR**  mp3 (with .mp3 extension)
-	</Accordion>
+    The officially supported types of codecs for AstroDX on iOS:
+    	- **Video:** H.264
+    	- **Audio:** OGG Vorbis (with .ogg extension) **OR**  mp3 (with .mp3 extension)
+    </Accordion>
 
 <Accordion title="I've put the mv.mp4 (or bg.mp4) file into the folder, but it isn't playing!">
 
@@ -211,11 +242,11 @@ Just pop into the game and enjoy AstroDX.
 
 <Accordion title="Can you send out a .ipa file so that we can sideload the game?">
 
-   Wish we could, but here's the reason why we can't:
+Wish we could, but here's the reason why we can't:
 
     > For the time being, ipa sideloading isn't recommended. In short, publishing ipa files allow people to distribute AstroDX as their own on the app store, and potentially profit from it by inserting ads or adding paid restrictions. We wanted to make sure the game is pushed to the app store rightfully, so that's why we're not planning on publishing any ipa files.
 
-   **TL;DR:** Bad people is why we can't have nice things.
+**TL;DR:** Bad people is why we can't have nice things.
 
     </Accordion>
 
@@ -237,6 +268,7 @@ Just pop into the game and enjoy AstroDX.
     **Multiple levels can have the same name.** Although we use folders to group levels, the levels are expanded into a singular list in the game. This makes it possible to have two or more folders of the same name, creating a key collision in the game’s dictionary of levels. And when you’re adding levels to a sea of folders, it’s difficult to identify whether a folder of the same name already exists.
 
     By using an alternative way to represent the collections, though we made it slightly more complex to edit collection data (which we’re working on adding an in-game collections manager to fix), we’re able to fix the issues mentioned above.
+
 </Accordion>
 </Accordions>
 
@@ -246,7 +278,3 @@ Cope, seethe, mald, and ping @davidscann in the AstroDX Discord server.
 **Just make sure to tell me that you’ve decided not to read the guide first.**
 
 <p className="font-serif text-center italic text-xl"> ✨ made with love 💖 </p>
-
-
-
-
