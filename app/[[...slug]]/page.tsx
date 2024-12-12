@@ -9,6 +9,8 @@ import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 import { MDXComponents } from "mdx/types";
 
+export const runtime = "edge";
+
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
@@ -29,9 +31,9 @@ export default async function Page(props: {
   );
 }
 
-export async function generateStaticParams() {
-  return source.generateParams();
-}
+// export async function generateStaticParams() {
+//   return source.generateParams();
+// }
 
 export async function generateMetadata(props: {
   params: Promise<{ slug?: string[] }>;
