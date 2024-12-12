@@ -12,4 +12,5 @@ export const baseOptions: BaseLayoutProps = {
     title: "AstroDX",
     enableSearch: false,
   },
+  i18n: true,
 };
