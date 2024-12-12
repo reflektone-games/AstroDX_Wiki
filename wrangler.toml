@@ -2,3 +2,6 @@ name = "astrodx-wiki"
 compatibility_date = "2024-12-11"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
+
+[vars]
+NODE_VERSION = 22.12.0
