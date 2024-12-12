@@ -11,3 +11,6 @@ compatibility_flags = [ "nodejs_compat " ]
 
 [env.production.placement]
 mode = "smart"
+
+[vars]
+NODE_VERSION = 22.12.0
