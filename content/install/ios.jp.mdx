@@ -1,0 +1,221 @@
+---
+title: iOS/iPadOS
+---
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Card, Cards } from "fumadocs-ui/components/card";
+
+![Guide banner with text that says: AstroDX Installation Guide (iOS / iPadOS Edition)](content/media/adx_iosguide.webp)
+
+<Callout title="校正が必要だ!" type="info">
+  このセットアップにヘルプが必要な場合は、[discordサーバー](https://sht.moe/astrodx)に参加してください。ありがとうございます！
+</Callout>
+# アプリインストール
+
+<Steps>
+
+<Step>
+  ### TestFlightダウンロード
+  AstroDX のテストに参加するには、まず App Store から [TestFlight アプリ](https://apps.apple.com/ca/app/testflight/id899247664)をダウンロードする必要があります。
+  ダウンロードしたら、そのままにしておいてください。まだ開く必要はありません。
+</Step>
+
+<Step>
+### TestFlightの招待を見つける
+AstroDX の [Discord サーバー](https://sht.moe/astrodx)に既に参加している場合は、
+[TestFlight チャンネル](https://discord.com/channels/892807792996536453/1210127565986205726)で TestFlight リンクを見つけられるはずです。
+面倒くさければ、ここにリンクがあります。ただ、[Discordサーバー](https://sht.moe/astrodx)に参加して、該当のチャンネルを確認することをお勧めします。というのも、
+これらのグループはすぐにいっぱいになってしまい、参加できなくなることがよくあるからです。
+
+<Accordions>
+<Accordion title="リンクはこちら">
+	<Cards>
+	<Card
+	href="https://testflight.apple.com/join/rACTLjPL"
+	title="Group A"
+	>
+	</Card>
+	<Card
+	href="https://testflight.apple.com/join/ocj3yptn"
+	title="Group B"
+	>
+	</Card>
+	<Card
+	href="https://testflight.apple.com/join/CuMxZE2M"
+	title="Group C"
+	>
+	</Card>
+	<Card
+	href="https://testflight.apple.com/join/T6qKfV6f"
+	title="Group D"
+	>
+  </Card>
+	<Card
+	href="https://testflight.apple.com/join/sMm1MCYc"
+	title="Group E"
+	>
+	</Card>
+	</Cards>
+
+    ただし、スロットが空いたときのライブアップデートは見逃すことになる。
+</Accordion>
+</Accordions>
+</Step>
+<Step>
+### AstroDX初回起動
+参加可能な TestFlight グループに入ったら、そのまま登録してアプリをインストールできるはずです。
+AstroDXをインストールした後は、初期化のために少なくとも一度はゲームを開く必要があります。後で曲を入れるときに、より簡単になります。
+</Step>
+</Steps>
+
+# 譜面の入れ方
+
+### 譜面は何処？
+
+<Cards>
+  <Card
+    title="譜面"
+    href="https://discord.com/channels/892807792996536453/1081048213185900584"
+  >
+    ここはリンク。
+  </Card>
+</Cards>
+
+<Steps>
+<Step>
+### ディレクトリへ移動する
+「ファイル」アプリを使って、`AstroDX/levels/「フォルダ」 `に移動してください。
+
+
+</Step>
+<Step>
+### 譜面を適切なフォルダに移動する
+
+<Accordions>
+<Accordion
+title="新しい譜面とコレクションのインストール方法はこちらです。">
+	<Steps>
+	<Step>
+	必要な譜面/コレクションの`.zip`アーカイブをダウンロードしてください。
+	</Step>
+	<Step>
+	その `.zip`ファイルの名前を変更し、拡張子を`.adx`に変更してください。
+
+    	<p className="text-sm opacity-50"> 例えば、`24. PRiSM.zip`は`24. PRiSM.adx`に名前が変更されます。単一の譜面も同じです。
+      ※拡張子を含めてリネームする必要があります。拡張子を表示するオプションを出せるアプリを利用する！そうしないと，
+      24.PRiSM.adx.zip となってしまう場合が結構あります！ </p>
+    </Step>
+    <Step>
+    ファイル内にある`AstroDX`フォルダに、その`.adx`ファイルを移動してください。
+
+    **いいえ、`levels`ではありません、`AstroDX`フォルダ。**
+
+</Step>
+</Steps>
+</Accordion>
+</Accordions>
+**これで完了です。** 次回ゲームを起動する際、AstroDXが自動的にレベルを整理します。
+</Step>
+</Steps>
+
+# 既存のコレクションへの楽曲追加について
+
+<Callout title="コレクションをさらに変更しますか？">
+  **何も変更する気がなければ、次のセクションを飛ばすか**(または、完了したのでガイドを終了しても大丈夫です)。
+</Callout>
+まず構造から。
+楽曲については、すべて以下の構造に従います．
+すなわち、楽曲フォルダはlevelsフォルダ内に全て追加します．
+
+```
+AstroDX
+| cache
+| settings.json
+| collections
+├levels
+|└曲
+  └譜面
+   ├bg.jpg       （ジャケット画像）
+   | pv.mp4       （動画）
+   | maidata.txt  （譜面データ）
+   | track.ogg/mp3（音源）
+
+次に コレクションについて，
+AstroDX
+| cache
+| settings.json
+| levels
+├ collections
+ ├コレクション名
+ | └ manifest.json
+ ├コレクション名2
+   └ manifest.json
+```
+
+```json
+{
+  "name": "コレクション名",
+  "id": null, // これは無視してもいい
+  "serverUrl": null, // これは無視してもいい
+  "levelIds": ["曲1", "曲2", "…曲n"]
+}
+```
+
+`“levelIds”:[]`の中に””で囲う形で曲フォルダ名を入力します．曲と曲の間のカンマも忘れずに！
+以上を終えたら、AstroDXを新しく起動して、譜面の再読み込みボタンを押せば完了です!
+
+
+
+# FAQ
+
+<Accordions>
+
+<Accordion title="［/levels]に.rar/.zipファイルを入れましたけどダメです。">
+    まずは中のファイルを解凍する必要があります。上記のフォルダ構造と一致するようにしてください。
+    [.adxアーカイブの方法](#navigating-to-the-directory)を使った方がいいと思います。
+    </Accordion>
+
+<Accordion title="通知ってオフにできないの？何回も下にスライドしちゃうんだよね。">
+    [ガイドアクセス](https://www.google.com/search?q=ios+guided+access)を使用してください。
+    </Accordion>
+
+<Accordion
+    title="ファイルの互換性に関する詳細情報"
+    >
+    iOS版AstroDXで正式にサポートされているコーデックの種類について
+    	- **動画:** H.264
+    	- **音源:** OGG Vorbis（拡張子.ogg）**または** mp3（拡張子.mp3）
+    </Accordion>
+
+<Accordion title="mv.mp4（またはbg.mp4）ファイルをフォルダに入れたのですが、再生されません！">
+    AstroDXは動画ファイルとして`pv.mp4`のみを検出するようです。
+    </Accordion>
+
+<Accordion title="AstroDXはなぜAppStoreにないのですか？わざわざTestFlightを使う面倒なことをする理由は何ですか？">
+    まだ App Store でのリリース基準を満たしておらず、正式にリリースする前にはゲームをしっかりと作り込みたいと考えています。
+    </Accordion>
+
+<Accordion title=".ipaファイルを送ってもらえますか？ゲームをサイドロードできるようにするためです。">
+    現時点では、IPAのサイドロードは推奨しておりません。簡単に言うと、IPAファイルを公開してしまうと、他の人がAstroDXを自分のものとしてApp Storeで配信したり、広告を挿入したり、有料制限を追加したりして、利益を得る可能性があります。私たちはゲームが正当な形でApp Storeに配信されることを望んでいるため、IPAファイルの公開は予定しておりません。
+    </Accordion>
+
+<Accordion title="TestFightがすぐにいっぱいになってしまうのはなぜですか？いつAstroDXをダウンロードできるチャンスがきますか？">
+    はっきり言って、まだわかりません。スロットの数に制限があるのは、現時点ではこれくらいしか運営できる余裕がないからです。経費は自分たちで負担しています。
+    </Accordion>
+
+<Accordion title="[2.0 Beta] なぜストレージのレイアウトを変更するのか？">
+    以前のバージョンのAstroDXでは、譜面は最上位（譜面フォルダの直下）に配置するか、または複数の譜面を名前付きの別のフォルダに入れて「コレクション」を作成することができました。これにより、ファイルシステムで直接コレクションをカスタマイズするのが簡単でしたが、いくつかの興味深い問題も発生していました。
+
+    「同じ譜面を複数のコレクションで使用できない」コレクションはフォルダとして存在するため、同じレベルを同時に複数のフォルダに入れる方法を見つけるのは困難です。たとえ可能だとしても、譜面を削除したり、別の場所に移動したりする場合、ショートカットやリンクの管理は確実に難しくなります。
+
+    「複数の譜面が同じ名前を持つ可能性がある」譜面をグループ化するためにフォルダを使用していますが、譜面はゲーム内で単一のリストに展開されます。これにより、同じ名前のフォルダが複数存在し、ゲームの譜面の辞書でキーの衝突が発生する可能性があります。また、大量のフォルダに譜面を追加している場合、同じ名前のフォルダがすでに存在するかどうかを識別するのは困難です。
+
+    コレクションを表現する別の方法を使用することで、コレクションデータの編集が若干複雑になりましたが（この問題を修正するために、ゲーム内コレクションマネージャーの追加に取り組んでいます）、上記の問題を修正することができます。
+    </Accordion>
+</Accordions>
+
+### **なんてこった！ とても読む気にならない。**
+[general-日本語へ行く](https://discord.com/channels/892807792996536453/1054390514583097414)
+
+<p className="font-serif text-center italic text-xl"> 基礎翻訳: @hptuse (機械翻訳)　追記: @massan7071 (on discord)</p>
