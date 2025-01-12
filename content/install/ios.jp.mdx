@@ -8,30 +8,28 @@ import { Card, Cards } from "fumadocs-ui/components/card";
 
 ![Guide banner with text that says: AstroDX Installation Guide (iOS / iPadOS Edition)](content/media/adx_iosguide.webp)
 
-<Callout title="Translator needed! 🤓">
-  Those who want to copy this guide and translate it to your native language so
-  that people who do not know English can still enjoy this game; Please contact
-  me @davidscann in the [AstroDX Discord server](https://sht.moe/astrodx), and
-  I'll copy this template and hand it over to you (as well as clarifications if
-  you need it). Thank you!
+<Callout title="校正が必要だ!" type="info">
+  このセットアップにヘルプが必要な場合は、[discordサーバー](https://sht.moe/astrodx)に参加してください。ありがとうございます！
 </Callout>
-
-# App installation
-
-Here's how you can install the app.
+# アプリインストール
 
 <Steps>
 
 <Step>
-  ### Download TestFlight
-  You'll need to download the [TestFlight app](https://apps.apple.com/ca/app/testflight/id899247664).
+  ### TestFlightダウンロード
+  AstroDX のテストに参加するには、まず App Store から [TestFlight アプリ](https://apps.apple.com/ca/app/testflight/id899247664)をダウンロードする必要があります。
+  ダウンロードしたら、そのままにしておいてください。まだ開く必要はありません。
 </Step>
 
 <Step>
-### TestFlight Invitation
-You'll be able to find the links in our [Discord server](https://sht.moe/astrodx), in the [#testflight](https://discord.com/channels/892807792996536453/1210127565986205726) channel.
+### TestFlightの招待を見つける
+AstroDX の [Discord サーバー](https://sht.moe/astrodx)に既に参加している場合は、
+[TestFlight チャンネル](https://discord.com/channels/892807792996536453/1210127565986205726)で TestFlight リンクを見つけられるはずです。
+面倒くさければ、ここにリンクがあります。ただ、[Discordサーバー](https://sht.moe/astrodx)に参加して、該当のチャンネルを確認することをお勧めします。というのも、
+これらのグループはすぐにいっぱいになってしまい、参加できなくなることがよくあるからです。
+
 <Accordions>
-<Accordion title="If you're too lazy though, here they are.">
+<Accordion title="リンクはこちら">
 	<Cards>
 	<Card
 	href="https://testflight.apple.com/join/rACTLjPL"
@@ -52,229 +50,172 @@ You'll be able to find the links in our [Discord server](https://sht.moe/astrodx
 	href="https://testflight.apple.com/join/T6qKfV6f"
 	title="Group D"
 	>
+  </Card>
+	<Card
+	href="https://testflight.apple.com/join/sMm1MCYc"
+	title="Group E"
+	>
 	</Card>
 	</Cards>
 
-    However, you'll be missing out on live updates for when slots free up. Your choice. ¯\\\_(ツ)_/¯
-
+    ただし、スロットが空いたときのライブアップデートは見逃すことになる。
 </Accordion>
 </Accordions>
 </Step>
 <Step>
-### First launch
-Once the app is finished downloading, launch it once to initialise the game. This makes it easier for you to install songs later.
+### AstroDX初回起動
+参加可能な TestFlight グループに入ったら、そのまま登録してアプリをインストールできるはずです。
+AstroDXをインストールした後は、初期化のために少なくとも一度はゲームを開く必要があります。後で曲を入れるときに、より簡単になります。
 </Step>
 </Steps>
 
-**There won’t be any songs by default!** That’s ok, we’ll get songs later **in the next section**.
+# 譜面の入れ方
 
-# Installing Levels
-
-### Where are the charts?
-
-Let's get this out of the way.
+### 譜面は何処？
 
 <Cards>
   <Card
-    title="Chart download where?"
+    title="譜面"
     href="https://discord.com/channels/892807792996536453/1081048213185900584"
   >
-    The question you've all been waiting for. Maybe. Probably.
+    ここはリンク。
   </Card>
 </Cards>
 
-Here's how you can put those levels into your game.
-
 <Steps>
 <Step>
-### Navigating to the directory
-Using the Files app, navigate to the `AstroDX/levels/` folder.
-<Callout
-title="Did you download your charts on your computer instead?"
->
-For Mac OS users, I assume you can just AirDrop the files to your device.
+### ディレクトリへ移動する
+「ファイル」アプリを使って、`AstroDX/levels/「フォルダ」 `に移動してください。
 
-I don't have a Mac myself, so I can't show you how, but it should be possible.
-
-    For Windows and Linux users, I recommend heading to [this section](#localsend-an-open-source-alternative-to-airdrop) where I go into detail how to transfer files efficiently to i[Pad]OS.
-    </Callout>
 
 </Step>
 <Step>
-### Installing the charts
-- The new AstroDX update has made installing new charts simultaneously simpler but also more complex. You'll see what I mean.
-
-**For the purpose of this guide, a `collection` is basically a folder of charts. You'll be familiar with this structure.** `24. PRiSM/Chronomia`
+### 譜面を適切なフォルダに移動する
 
 <Accordions>
 <Accordion
-title="Here's how you install new charts and collections:">
+title="新しい譜面とコレクションのインストール方法はこちらです。">
 	<Steps>
 	<Step>
-	Download the `.zip` archive for the chart/collection that you want.
+	必要な譜面/コレクションの`.zip`アーカイブをダウンロードしてください。
 	</Step>
 	<Step>
-	Rename that `.zip` file and change the extension to `.adx`.
+	その `.zip`ファイルの名前を変更し、拡張子を`.adx`に変更してください。
 
-    	<p className="text-sm opacity-50"> For example, `24. PRiSM.zip` now becomes `24. PRiSM.adx`. Same goes for single charts. </p>
+    	<p className="text-sm opacity-50"> 例えば、`24. PRiSM.zip`は`24. PRiSM.adx`に名前が変更されます。単一の譜面も同じです。
+      ※拡張子を含めてリネームする必要があります。拡張子を表示するオプションを出せるアプリを利用する！そうしないと，
+      24.PRiSM.adx.zip となってしまう場合が結構あります！ </p>
     </Step>
     <Step>
-    Move that .adx file into the `AstroDX` folder, located in your Files.
+    ファイル内にある`AstroDX`フォルダに、その`.adx`ファイルを移動してください。
 
-    **No, not `levels`.**
+    **いいえ、`levels`ではありません、`AstroDX`フォルダ。**
 
 </Step>
 </Steps>
 </Accordion>
 </Accordions>
-**That's it.** The next time you open the game, AstroDX will automagically sort your levels out for you, and you can enjoy the charts.
+**これで完了です。** 次回ゲームを起動する際、AstroDXが自動的にレベルを整理します。
 </Step>
 </Steps>
 
-If you want to change the collection details, like say add a new single chart into a collection, it becomes a bit more complicated.
+# 既存のコレクションへの楽曲追加について
 
-<Callout title="Do you want to modify your collections further?">
-  **Skip over this next section** (or even exit the guide, because you're done)
-  if you're uninterested in changing anything.
+<Callout title="コレクションをさらに変更しますか？">
+  **何も変更する気がなければ、次のセクションを飛ばすか**(または、完了したのでガイドを終了しても大丈夫です)。
 </Callout>
-Inside of your `AstroDX` folder, you will find a `collections` folder and a `levels`
-folder. - The `collections` folder ONLY stores information about the individual collections,
-located in subfolders. - The `levels` folder ONLY stores files that are related to
-your charts.
+まず構造から。
+楽曲については、すべて以下の構造に従います．
+すなわち、楽曲フォルダはlevelsフォルダ内に全て追加します．
 
-If you want to modify a collection, say to add a chart into one, you'll have to go into that subfolder and change information about the `manifest.json` file.
+```
+AstroDX
+| cache
+| settings.json
+| collections
+├levels
+|└曲
+  └譜面
+   ├bg.jpg       （ジャケット画像）
+   | pv.mp4       （動画）
+   | maidata.txt  （譜面データ）
+   | track.ogg/mp3（音源）
 
-Feel free to read the information about the file located [here](https://astrodx.notion.site/Collection-Manifest-Details-8f966de6971748e0ac01c0a0a6054594), but **TL;DR**:
-
-In the `manifest.json` file, you will have this format. Reading this should give you an idea of how it works.
+次に コレクションについて，
+AstroDX
+| cache
+| settings.json
+| levels
+├ collections
+ ├コレクション名
+ | └ manifest.json
+ ├コレクション名2
+   └ manifest.json
+```
 
 ```json
 {
-  "name": "Collection name",
-  "id": null, // you can ignore this
-  "serverUrl": null, // you can ignore this
-  "levelIds": ["Each item here", "is a folder inside", "the levels folder"]
+  "name": "コレクション名",
+  "id": null, // これは無視してもいい
+  "serverUrl": null, // これは無視してもいい
+  "levelIds": ["曲1", "曲2", "…曲n"]
 }
 ```
 
-Exactly as formatted, that's how a `manifest.json` file works.
+`“levelIds”:[]`の中に””で囲う形で曲フォルダ名を入力します．曲と曲の間のカンマも忘れずに！
+以上を終えたら、AstroDXを新しく起動して、譜面の再読み込みボタンを押せば完了です!
 
-#### LocalSend – an open source alternative to AirDrop
 
-This section is basically quintessential if you want to transfer files from your PC to your iPhone / iPad (unless it's a Mac, in which case just use AirDrop)
 
-Download LocalSend on both your PC and your device.
-
-<Cards>
-  <Card
-    title="App Store"
-    href="https://apps.apple.com/us/app/localsend/id1661733229"
-  ></Card>
-  <Card
-    title="Official Website for PC Download"
-    href="https://localsend.org/"
-  ></Card>
-</Cards>
-Make sure that both devices are on the same WiFi network.
-
-Keep the LocalSend app open on your mobile device. On your PC:
-
-<Steps>
-  <Step> Open the Send menu. </Step>
-  <Step>
-    {" "}
-    Choose "File", and select the `.adx` file that includes your charts.{" "}
-  </Step>
-  <Step>
-    {" "}
-    Your iPhone or iPad should be in this menu as well, with a codename. Click on
-    the name.{" "}
-  </Step>
-  <Step>
-    {" "}
-    Check your device. It should now have a prompt asking you if you want to Accept
-    the files. Of course, Accept.{" "}
-  </Step>
-  <Step> The files should now be in your Files app, under `LocalSend`. </Step>
-  <Step>
-    {" "}
-    Just move the transferred `.adx` file to `AstroDX`, and you're done!{" "}
-  </Step>
-</Steps>
-Just pop into the game and enjoy AstroDX.
-
-# FAQ (Fully Anticipated Questions)
+# FAQ
 
 <Accordions>
-	<Accordion title="I've put the .rar/.zip file into `/levels`, but it's still not working!">
 
-    You'll need to extract it first.
-
-    You’re probably better off using [the .adx archive method](#navigating-to-the-directory) though.
+<Accordion title="［/levels]に.rar/.zipファイルを入れましたけどダメです。">
+    まずは中のファイルを解凍する必要があります。上記のフォルダ構造と一致するようにしてください。
+    [.adxアーカイブの方法](#navigating-to-the-directory)を使った方がいいと思います。
     </Accordion>
 
-    <Accordion title="Is there a way to turn off Notifications? I keep on sliding it down.">
-
-    Use [**Guided Access**](https://www.google.com/search?q=ios+guided+access).
-
+<Accordion title="通知ってオフにできないの？何回も下にスライドしちゃうんだよね。">
+    [ガイドアクセス](https://www.google.com/search?q=ios+guided+access)を使用してください。
     </Accordion>
 
-    <Accordion
-    title="Information regarding file compatibility"
+<Accordion
+    title="ファイルの互換性に関する詳細情報"
     >
-    I couldn't phrase the question right, so I'm just gonna dump this info here.
-
-    The officially supported types of codecs for AstroDX on iOS:
-    	- **Video:** H.264
-    	- **Audio:** OGG Vorbis (with .ogg extension) **OR**  mp3 (with .mp3 extension)
+    iOS版AstroDXで正式にサポートされているコーデックの種類について
+    	- **動画:** H.264
+    	- **音源:** OGG Vorbis（拡張子.ogg）**または** mp3（拡張子.mp3）
     </Accordion>
 
-<Accordion title="I've put the mv.mp4 (or bg.mp4) file into the folder, but it isn't playing!">
-
-    AstroDX only detects `pv.mp4` for video files. `mv.mp4` is what is needed to run the video in [Majdata](https://rentry.org/maiguide).
+<Accordion title="mv.mp4（またはbg.mp4）ファイルをフォルダに入れたのですが、再生されません！">
+    AstroDXは動画ファイルとして`pv.mp4`のみを検出するようです。
     </Accordion>
 
-<Accordion title="Why isn't the game on the App Store?">
-
-    The reasons are twofold. We do not yet qualify for deployment on the App Store, and we want to be a fully fleshed game before we do so.
-
+<Accordion title="AstroDXはなぜAppStoreにないのですか？わざわざTestFlightを使う面倒なことをする理由は何ですか？">
+    まだ App Store でのリリース基準を満たしておらず、正式にリリースする前にはゲームをしっかりと作り込みたいと考えています。
     </Accordion>
 
-<Accordion title="Can you send out a .ipa file so that we can sideload the game?">
-
-Wish we could, but here's the reason why we can't:
-
-    > For the time being, ipa sideloading isn't recommended. In short, publishing ipa files allow people to distribute AstroDX as their own on the app store, and potentially profit from it by inserting ads or adding paid restrictions. We wanted to make sure the game is pushed to the app store rightfully, so that's why we're not planning on publishing any ipa files.
-
-**TL;DR:** Bad people is why we can't have nice things.
-
+<Accordion title=".ipaファイルを送ってもらえますか？ゲームをサイドロードできるようにするためです。">
+    現時点では、IPAのサイドロードは推奨しておりません。簡単に言うと、IPAファイルを公開してしまうと、他の人がAstroDXを自分のものとしてApp Storeで配信したり、広告を挿入したり、有料制限を追加したりして、利益を得る可能性があります。私たちはゲームが正当な形でApp Storeに配信されることを望んでいるため、IPAファイルの公開は予定しておりません。
     </Accordion>
 
-    <Accordion title="Why is the TestFlight so often full? When will I get my chance to play?">
-    The short answer is: too many players want to play this game.
-
-    The reason why there's a specific amount of slots is because that's all we can afford to open right now. It costs us to open these groups for you guys, and we're paying out of pocket.
-    </Accordion>
-    <Accordion title="If the slots run out that quickly, why don't you just open more groups? Why not a Group E and a Group F and so on?">
-    Read above.
+<Accordion title="TestFightがすぐにいっぱいになってしまうのはなぜですか？いつAstroDXをダウンロードできるチャンスがきますか？">
+    はっきり言って、まだわかりません。スロットの数に制限があるのは、現時点ではこれくらいしか運営できる余裕がないからです。経費は自分たちで負担しています。
     </Accordion>
 
-<Accordion title="[2.0 Beta] Why are we changing the storage layout?">
+<Accordion title="[2.0 Beta] なぜストレージのレイアウトを変更するのか？">
+    以前のバージョンのAstroDXでは、譜面は最上位（譜面フォルダの直下）に配置するか、または複数の譜面を名前付きの別のフォルダに入れて「コレクション」を作成することができました。これにより、ファイルシステムで直接コレクションをカスタマイズするのが簡単でしたが、いくつかの興味深い問題も発生していました。
 
-    As you might have known, in previous versions of AstroDX, levels can be either put in the top-level (Directly inside the `levels` folder), or you can put one or more levels inside another named folder to make a **collection**. This made it easy to customize collections straight in the file system, though it also introduces some interesting problems.
+    「同じ譜面を複数のコレクションで使用できない」コレクションはフォルダとして存在するため、同じレベルを同時に複数のフォルダに入れる方法を見つけるのは困難です。たとえ可能だとしても、譜面を削除したり、別の場所に移動したりする場合、ショートカットやリンクの管理は確実に難しくなります。
 
-    **You can’t use the same level in multiple collections.** Since collections exist as folders, it’s difficult to find a way to put the same level inside many folders at the same time. Even if it’s possible, managing shortcuts and links will certainly be difficult when it comes to deleting a level or moving a level elsewhere.
+    「複数の譜面が同じ名前を持つ可能性がある」譜面をグループ化するためにフォルダを使用していますが、譜面はゲーム内で単一のリストに展開されます。これにより、同じ名前のフォルダが複数存在し、ゲームの譜面の辞書でキーの衝突が発生する可能性があります。また、大量のフォルダに譜面を追加している場合、同じ名前のフォルダがすでに存在するかどうかを識別するのは困難です。
 
-    **Multiple levels can have the same name.** Although we use folders to group levels, the levels are expanded into a singular list in the game. This makes it possible to have two or more folders of the same name, creating a key collision in the game’s dictionary of levels. And when you’re adding levels to a sea of folders, it’s difficult to identify whether a folder of the same name already exists.
-
-    By using an alternative way to represent the collections, though we made it slightly more complex to edit collection data (which we’re working on adding an in-game collections manager to fix), we’re able to fix the issues mentioned above.
-
-</Accordion>
+    コレクションを表現する別の方法を使用することで、コレクションデータの編集が若干複雑になりましたが（この問題を修正するために、ゲーム内コレクションマネージャーの追加に取り組んでいます）、上記の問題を修正することができます。
+    </Accordion>
 </Accordions>
 
-### **My god, I do not want to read any of that.**
+### **なんてこった！ とても読む気にならない。**
+[general-日本語へ行く](https://discord.com/channels/892807792996536453/1054390514583097414)
 
-Cope, seethe, mald, and ping @davidscann in the AstroDX Discord server.
-**Just make sure to tell me that you’ve decided not to read the guide first.**
-
-<p className="font-serif text-center italic text-xl"> ✨ made with love 💖 </p>
+<p className="font-serif text-center italic text-xl"> 基礎翻訳: @hptuse (機械翻訳)　追記: @massan7071 (on discord)</p>
