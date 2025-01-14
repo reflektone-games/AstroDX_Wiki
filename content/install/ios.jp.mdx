@@ -5,11 +5,12 @@ title: iOS/iPadOS
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 import { Step, Steps } from "fumadocs-ui/components/steps";
 import { Card, Cards } from "fumadocs-ui/components/card";
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
 
 ![Guide banner with text that says: AstroDX Installation Guide (iOS / iPadOS Edition)](content/media/adx_iosguide.webp)
 
-<Callout title="校正が必要だ!" type="info">
-  このセットアップにヘルプが必要な場合は、[discordサーバー](https://sht.moe/astrodx)に参加してください。ありがとうございます！
+<Callout title="校閲が必要です!" type="info">
+  このセットアップにヘルプが必要な場合は、[discordサーバー](https://discord.gg/6fpETgpvjZ)に参加してください。ありがとうございます！
 </Callout>
 # アプリインストール
 
@@ -17,15 +18,16 @@ import { Card, Cards } from "fumadocs-ui/components/card";
 
 <Step>
   ### TestFlightダウンロード
-  AstroDX のテストに参加するには、まず App Store から [TestFlight アプリ](https://apps.apple.com/ca/app/testflight/id899247664)をダウンロードする必要があります。
-  ダウンロードしたら、そのままにしておいてください。まだ開く必要はありません。
+  
+  AstroDXをダウンロードするには、[TestFlight](https://apps.apple.com/ca/app/testflight/id899247664)アプリが必要です。 
+  App StoreからTestFlightをダウンロードしたら、そのままにおしていてください。まだ起動する必要がありません。
 </Step>
 
 <Step>
 ### TestFlightの招待を見つける
-AstroDX の [Discord サーバー](https://sht.moe/astrodx)に既に参加している場合は、
+AstroDX の [Discord サーバー](https://discord.gg/6fpETgpvjZ)に既に参加している場合は、
 [TestFlight チャンネル](https://discord.com/channels/892807792996536453/1210127565986205726)で TestFlight リンクを見つけられるはずです。
-面倒くさければ、ここにリンクがあります。ただ、[Discordサーバー](https://sht.moe/astrodx)に参加して、該当のチャンネルを確認することをお勧めします。というのも、
+面倒くさければ、ここにリンクがあります。ただ、[Discordサーバー](https://discord.gg/6fpETgpvjZ)に参加して、該当のチャンネルを確認することをお勧めします。というのも、
 これらのグループはすぐにいっぱいになってしまい、参加できなくなることがよくあるからです。
 
 <Accordions>
@@ -128,30 +130,30 @@ title="新しい譜面とコレクションのインストール方法はこち�
 楽曲については、すべて以下の構造に従います．
 すなわち、楽曲フォルダはlevelsフォルダ内に全て追加します．
 
-```
-AstroDX
-| cache
-| settings.json
-| collections
-├levels
-|└曲
-  └譜面
-   ├bg.jpg       （ジャケット画像）
-   | pv.mp4       （動画）
-   | maidata.txt  （譜面データ）
-   | track.ogg/mp3（音源）
+ AstroDX
+<Files>
+  <Folder name="cache">
+  </Folder>
+  <File name="settings.json" />
+  <Folder name="collections">
+  </Folder>
+  <Folder name="曲">
+    <File name="bg.jpg（ジャケット画像）" />
+    <File name="mv.mp4（動画）"　/>
+    <File name="maidata.txt　（譜面データ）" />
+    <File name="track.ogg/mp4　（音源）" />
+  </Folder>
+</Files>
 
 次に コレクションについて，
-AstroDX
-| cache
-| settings.json
-| levels
-├ collections
- ├コレクション名
- | └ manifest.json
- ├コレクション名2
-   └ manifest.json
-```
+
+<Files>
+  <Folder name="コレクション" defaultOpen>
+    <Folder name="コレクション名" defaultOpen>
+    <File name="manifest.json" />
+    </Folder>
+  </Folder>
+</Files>
 
 ```json
 {
