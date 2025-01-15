@@ -48,7 +48,7 @@ ex.
 languages: ["en", "cn", "vn", "jp", "your_language"],
 ```
 ***
-Under `content/` and `content/media/` you will see a few .mdx files.
+Under `content/` and `content/install/` you will see a few .mdx files.
 
 7. To make a translation, duplicate the base files (without language codes), and edit the names to include your two-letter language code. ex. `index.vn.mdx`.
 8. You can now edit the files and start translating! The contents that you can translate are those not inbetween these pointy brackets `<>` and anything that looks like code. If you're confused about what you can or cannot translate, feel free to give `@davidscann` a ping.
