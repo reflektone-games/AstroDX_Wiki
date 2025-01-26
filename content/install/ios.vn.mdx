@@ -1,0 +1,278 @@
+---
+title: iOS/iPadOS
+---
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Card, Cards } from "fumadocs-ui/components/card";
+
+![Guide banner with text that says: AstroDX Installation Guide (iOS / iPadOS Edition)](content/media/adx_iosguide.webp)
+
+<Callout title="Tìm người thông dịch">
+  Nếu bạn muốn góp phần dịch trang web này để nhiều người khác có thể chơi thử game này,
+  xin liên hệ @davidscann trong [server Discord AstroDX](https://discord.gg/6fpETgpvjZ) để
+  nhận một bản sao và chi tiết thêm nếu cần. Xin cảm ơn!
+</Callout>
+
+# Cài đặt Ứng dụng
+
+Đây là các bước để cài đặt Ứng dụng.
+
+<Steps>
+
+<Step>
+  ### Tải Ứng dụng TestFlight
+  Bạn sẽ phải tải Ứng dụng TestFlight qua [link này](https://apps.apple.com/ca/app/testflight/id899247664).
+</Step>
+
+<Step>
+### Link mời TestFlight
+Link mời có thể được tìm thấy trong [server Discord](https://sht.moe/astrodx) của chúng tôi, ở trong kênh chat [#testflight](https://discord.com/channels/892807792996536453/1210127565986205726).
+<Accordions>
+<Accordion title="Nếu bạn quá lười thì đây, Link đây.">
+	<Cards>
+	<Card
+	href="https://testflight.apple.com/join/rACTLjPL"
+	title="Nhóm A"
+	>
+	</Card>
+	<Card
+	href="https://testflight.apple.com/join/ocj3yptn"
+	title="Nhóm B"
+	>
+	</Card>
+	<Card
+	href="https://testflight.apple.com/join/CuMxZE2M"
+	title="Nhóm C"
+	>
+	</Card>
+	<Card
+	href="https://testflight.apple.com/join/T6qKfV6f"
+	title="Nhóm D"
+	>
+  </Card>
+	<Card
+	href="https://testflight.apple.com/join/sMm1MCYc"
+	title="Nhóm E"
+	>
+	</Card>
+	</Cards>
+
+    Tuy nhiên, bạn sẽ bỏ lỡ thông báo trực tiếp khi các Nhóm TestFlight trống. Lựa chọn là ở bạn. ¯\\\_(ツ)_/¯
+
+</Accordion>
+</Accordions>
+</Step>
+<Step>
+### Khởi động AstroDX
+Sau khi cài đặt game, bạn nên khởi động game ít nhất một lần. 
+
+Làm vậy giúp cho việc cài nhạc dễ dàng hơn sau này.
+</Step>
+</Steps>
+
+**Mặc định game sẽ không có bài nào.** Không sao cả, chúng ta sẽ bàn về vấn đề này **ở mục sau**.
+
+# Thêm nhạc/màn chơi
+
+### Kiếm nhạc ở đâu vậy?
+
+Nói trước kẻo quên.
+
+<Cards>
+  <Card
+    title="Tải nhạc ở đâu?"
+    href="https://discord.com/channels/892807792996536453/1081048213185900584"
+  >
+    Câu trả lời mà bạn đang tìm kiếm nằm ở đây. Có lẽ vậy.
+  </Card>
+</Cards>
+
+Đây là cách để cho màn chơi bạn vừa tải vào trong game.
+
+<Steps>
+<Step>
+### Di chuyển tới thư mục game
+Sử dụng Ứng dụng Files/Tệp, Tìm thư mục `AstroDX/`.
+<Callout
+title="Bạn đã tải nhạc bằng máy tính?"
+>
+Đối với người dụng MacOS, tôi đoán bạn có thể dùng AirDrop để chuyển tệp thẳng vào máy.
+
+Vì tôi không có máy chạy MacOS nên không thể chỉ cách làm được.
+
+    Cho người dùng Window và Linux, Tôi khuyến nghị bạn bấm vào [mục này](#localsend-an-open-source-alternative-to-airdrop) để xem chi tiết cách truyền dữ liệu hiệu quả đến i[Pad]OS.
+    </Callout>
+
+</Step>
+<Step>
+### Thêm nhạc/màn chơi
+- Bản cập nhật mới của AstroDX làm việc thêm nhạc đơn giản hơn nhưng đồng thời cũng phức tạp hơn. Bạn sẽ hiểu ý tôi thôi.
+
+**Tưởng tượng rằng, một `bộ sưu tập` là một thư mục chứa các màn chơi. Bạn sẽ quen với cấu trúc tệp tin này**:  `24. PRiSM/PANDORA PARADOXXX`
+
+<Accordions>
+<Accordion
+title="Đây là cách để bạn cài màn chơi/bộ sưu tập mới:">
+	<Steps>
+	<Step>
+	Tải tệp `.zip` cho màn chơi/bộ sưu tập mà bạn muốn.
+	</Step>
+	<Step>
+	đổi tên đuôi tệp `.zip` thành `.adx`.
+
+    	<p className="text-sm opacity-75"> Ví dụ, `24. PRiSM.zip` đổi thành `24. PRiSM.adx`. Làm tương tự cho một màn chơi đơn lẻ. </p>
+    </Step>
+    <Step>
+    Di chuyển tệp có đuôi .adx đó vào thư mục `AstroDX`, nằm ở trong ứng dụng Files/Tệp.
+
+    **Đừng di chuyển tệp vào thư mục `levels`.**
+
+</Step>
+</Steps>
+</Accordion>
+</Accordions>
+**Chỉ vậy thôi.** Khi bạn mở game, AstroDX sẽ làm phép và tự động phân loại màn chơi cho bạn.
+</Step>
+</Steps>
+
+Nếu bạn muốn thay đổi nội dung của bộ sưu tập, ví dụ như thêm một màn chơi vào, nó lại hơi phức tạp một chút.
+
+<Callout title="Bạn muốn tiếp tục chỉnh sửa bộ sưu tập?">
+  **Bỏ qua mục tiếp theo** (hoặc thoát hướng dẫn này, vì bạn đã xong việc ở đây rồi)
+  nếu bạn không muốn thay đổi gì nữa.
+</Callout>
+Ở trong thư mục `AstroDX`, bạn sẽ thấy thư mục `collections` và thư mục `levels`. 
+- Thư mục `collections` chứa thông tin về từng bộ sưu tập một, lưu trong những 
+thư mục con riêng biệt. - Thư mục `levels` chỉ chứa tệp liên quan đến màn chơi của bạn.
+
+Nếu bạn muốn chỉnh sửa một bộ sưu tập, ví dụ như thêm màn chơi vào một bộ, 
+bạn sẽ vào truy cập vào thư mục con đó và chỉnh sửa tệp `manifest.json`.
+
+Bạn có thể thử tìm hiểu về tệp tin này ở [đây](https://astrodx.notion.site/Collection-Manifest-Details-8f966de6971748e0ac01c0a0a6054594), nhưng **Tóm gọn lại thì**:
+
+Ở trong tệp `manifest.json`, sẽ có định dạng như sau. Mong rằng bạn sẽ hiểu sau khi đọc qua nó.
+
+```json
+{
+  "name": "Tên của bộ sưu tập", // VD: FiNALE hoặc PRiSM
+  "id": null, // Có thể bỏ qua cái này
+  "serverUrl": null, // Có thể bỏ qua cái này
+  "levelIds": ["PANDORA PARADOXXX", "Straight", "Yuusha when"]
+}
+```
+
+Đúng như định dạng trên, đó là cách tệp `manifest.json` hoạt động.
+
+#### LocalSend – một giải pháp mã nguồn mở để thay thế cho AirDrop
+
+Mục này rất quan trọng nếu bạn muốn truyền dữ liệu từ máy tính của bạn sang iPhone hoặc iPad (Trừ khi bạn dùng Mac, trường hợp này chỉ cần dùng AirDrop)
+
+Tải LocalSend vào điện thoại và máy tính.
+
+<Cards>
+  <Card
+    title="App Store"
+    href="https://apps.apple.com/us/app/localsend/id1661733229"
+  ></Card>
+  <Card
+    title="Trang web chính thức cho bản Máy tính"
+    href="https://localsend.org/"
+  ></Card>
+</Cards>
+Chắc chắn rằng cả hai thiết bị đang cùng chung một mạng WiFi.
+
+Giữ cho ứng dụng LocalSend chạy trên điện thoại. Trên máy tính của bạn:
+
+<Steps>
+  <Step> Mở menu Send. </Step>
+  <Step>
+    {" "}
+    Bấm vào "File", và chọn tệp `.adx` chứa màn chơi bạn cần.{" "}
+  </Step>
+  <Step>
+    {" "}
+    Điện thoại của bạn sẽ ở cùng trong menu này, với tên máy. Bấm vào nó.{" "}
+  </Step>
+  <Step>
+    {" "}
+    Kiểm tra thiết bị. Nó sẽ hiện một hộp thoại yêu cầu chấp thuận
+    tệp tin. Đương nhiên ở bước này bạn bấm Accept.{" "}
+  </Step>
+  <Step> Tệp tin lúc này sẽ nằm trong ứng dụng Files/Tệp, nằm trong thư mục `LocalSend`. </Step>
+  <Step>
+    {" "}
+    Chỉ cần di chuyển tệp `.adx` tới `AstroDX`, là bạn đã xong!{" "}
+  </Step>
+</Steps>
+Mở AstroDX và trải nghiệm ngay thôi.
+
+# FAQ (Những câu hỏi thường gặp)
+
+<Accordions>
+  <Accordion title="Có cách nào để tắt thông báo không? Tôi cứ kéo nhầm nó xuống thôi.">
+
+    Sử dụng [**Truy cập được hướng dẫn**](https://support.apple.com/vi-vn/111795).
+
+  </Accordion>
+
+  <Accordion
+    title="Thông tin về độ tương thích với các định dạng dữ liệu"
+    >
+    Tôi không hiểu câu hỏi này lắm, nên tôi sẽ trả lời theo ý hiểu của tôi.
+
+    Bộ giải mã được hỗ trợ bởi AstroDX trên iOS:
+    	- **Video:** H.264
+    	- **Âm thanh:** OGG Vorbis (với định đuôi .ogg) **HOẶC**  mp3 (với đuôi .mp3)
+  </Accordion>
+
+  <Accordion title="Tôi đã đặt tệp mv.mp4 (hoặc bg.mp4) vào trong thư mục, nhưng nó không chạy trong game!">
+
+    AstroDX chỉ nhận diện `pv.mp4` cho tệp video. `mv.mp4` là để dùng cho  [Majdata](https://rentry.org/maiguide).
+  </Accordion>
+
+  <Accordion title="Tại sao AstroDX không có trên App Store?">
+
+    Có hai nguyên nhân. Chúng tôi chưa đủ điều kiện để triển khai trên App Store, và chúng tôi muốn hoàn thiện trò chơi trước khi đăng nó lên App Store.
+
+  </Accordion>
+
+  <Accordion title="Bạn có thể gửi tệp .ipa để tôi cài game không cần TestFlight không?">
+
+    Có thể, nhưng chúng tôi có lý do để từ chối:
+
+    > Trong thời gian này, việc cài đặt AstroDX thông qua tệp .ipa không được khuyến nghị. Nói ngắn gọn, việc công bố tệp .ipa cho phép mọi người phân phối AstroDX trên App Store của họ, và có thể kiếm lợi từ việc đó bằng cách chèn quảng cáo hoặc thêm hạn chế trả phí. Chúng tôi muốn đảm bảo rằng trò chơi được đưa lên App Store một cách đúng đắn, đó là lý do tại sao chúng tôi không có kế hoạch công bố bất kỳ tệp .ipa nào.
+
+    **Tóm gọn lại thì:** Những kẻ xấu trên mạng là lý do chúng ta chả được cái gì tốt cả.
+
+  </Accordion>
+
+  <Accordion title="Tại sao TestFlight hay hết chỗ vậy? Khi nào tôi mới được chơi?">
+    Câu trả lời ngắn gọn là: Quá nhiều người muốn chơi.
+
+    Lý do vì sao có giới hạn chỗ trống vì chúng tôi chỉ có thể mở từng đó. Mở những nhóm này tốn tiền, và chúng tôi đang trả bằng tiền túi.
+  </Accordion>
+
+  <Accordion title="Nếu chỗ tham gia hết nhanh, sao lại không mở thêm nhóm? Sao lại không mở thêm nhóm F và nhóm G?">
+    Đọc phía trên.
+  </Accordion>
+
+  <Accordion title="[2.0 Beta] Tại sao lại thay đổi cách lưu trữ tệp?">
+
+    Như bạn đã biết, trong các phiên bản trước của AstroDX, màn chơi có để được đặt phía trên cùng (ngay trong thư mục `levels`), hoặc bạn có thể đặt một hoặc nhiều màn chơi bên trong một thư mục khác để tạo một **bộ sưu tập**. Điều này khiến việc tuỳ chỉnh bộ sưu tập được thực hiện dễ dàng trong ứng dụng Files/Tệp, mặc dù nó cũng tạo ra những vấn đề riêng.
+
+    **Bạn không thể có một màn chơi tồn tại trong nhiều bộ sưu tập.** Vì các bộ sưu tập tồn tại dưới dạng thư mục, việc cho một màn vào nhiều thư mục khác nhau khá khó. Mặc dù nó khả thi, quản lí lối tắt và đường dẫn khá khó khi bạn muốn xoá một màn chơi hoặc di chuyển nó đi chỗ khác.
+
+    **Nhiều màn chơi có thể có tên trùng lặp.** Mặc dù chúng tôi dùng thư mục để nhóm các màn chơi, các màn chơi được thêm vào một danh sách duy nhất trong game. Điều này cho phép sự tồn tại của một hoặc nhiều thư mục cùng tên, tạo nên sự trùng lặp giữa các từ khoá trong thư viện màn chơi của game. Và khi bạn thêm màn chơi vào một biển các thư mục, nó rất khó để kiểm tra sự hiện diện của các thư mục cùng tên.
+
+    Qua việc sử dụng phương pháp khác để lưu trữ các bộ sưu tập, dẫu cho việc chỉnh sửa bộ sưu tập có chút phức tạp hơn (mà chúng tôi đang thêm tính năng quản lí bộ sưu tập để sửa điều đó), chúng tôi có thể sửa những vấn đề kể trên.
+
+  </Accordion>
+</Accordions>
+
+### **Trời ơi, dài thế, không đọc đâu.**
+
+Vậy mà bạn vẫn đang đọc dòng này thì ngầu phết đấy 🐧. Ping @davidscann trong server Discord AstroDX để được trợ giúp.
+**Hãy nói với họ rằng bạn đã quá lười để đọc hướng dẫn sau khi ping.**
+
+<p className="font-serif text-center italic text-xl"> ✨ made with Salt 💖 </p>
