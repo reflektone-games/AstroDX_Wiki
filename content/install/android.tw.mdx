@@ -36,7 +36,7 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 <Step>
 ### 安裝
 
-某些瀏覽器可能會阻擋 APK 的下載。記得在設定中允許其下載。
+若遇到「無法安裝未識別的應用程式」等錯誤，請在設定中開啟安裝 APK 檔的權限。
 
 </Step>
 
@@ -45,130 +45,127 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 
 安裝後，請開啟應用程式至少一次以完成初始化。
 
-這會讓 Mai 譜的安裝更加輕鬆。
+這會讓歌曲的安裝更加輕鬆。
 
 </Step>
 </Steps>
 
-**裡面不會有任何預設的歌曲！** That’s ok, we’ll get songs later **in the next section**.
+**裡面不會有任何預設的歌曲！**
+別擔心，我們會在**下個章節中**介紹如何載入自己的歌曲。
 
-# Installing Levels
+# 安裝歌曲
 
 <Callout>
-  If you're using an older version of **AstroDX e.g. 2.0 pre-beta** or an
-  earlier version, please [go here for instructions.](/install/legacy-android) Do note that support is
-  not guaranteed on legacy versions of the game.
+  如果您正使用較舊的 **AstroDX 版本（2.0 前）**，請查看[此教學](/install/legacy-android)
+  不過舊版支援度不高。
 </Callout>
 
-### Where are the charts?
-
-Let's get this out of the way.
+### 譜面（歌曲的檔案）要哪裡找？
 
 <Cards>
   <Card
-    title="Chart download where?"
+    title="譜面哪裡找？"
     href="https://discord.com/channels/892807792996536453/1081048213185900584"
   >
-    Click this button to go towards the #chart-download-where channel
+    此連結通往 Discord 伺服器中 #chart-download-where 的頻道
   </Card>
 </Cards>
 
-### **Import via ADX archive** **(Recommended, Beta 2 Patch 4 and later)**
+### **從 ADX 中導入**
 
-This is the primary way to install levels, and it’s incredibly easy to get started.
+最為推薦的安裝方法，於 Beta 2 版號 4 後支援
 
 <Steps>
 
 <Step>
-  ### Rename your zip file
-  Any given `.zip` file of a level or multiple levels can be **renamed** into a `.adx` file.
+  ### 重新命名 ZIP 檔副檔名
+  所有 `.zip` 檔都能直接**重新命名**為 `.adx` 檔
 </Step>
 
 <Step>
-  ### Open with... > AstroDX
-  On supported devices, tap on the file in any file manager, and select `Open with… > AstroDX`
+  ### 選擇開啟工具 > AstroDX
+  在任何資料管理員中點選 `選擇開啟工具 > AstroDX`
 </Step>
 
 <Step>
-  ### Profit
-  AstroDX will automatically install levels for you [depending on what the archive contains](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74).
+  ### 大功告成
+  AstroDX
+  會[根據壓縮檔內容](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74)自動安裝歌曲。
 </Step>
 
 </Steps>
 
-<Callout title="On some devices, (for example Xiaomi or some Samsung devices), your file manager may not offfer the option to open with AstroDX." type="warn">
+<Callout title="在某些裝置上（如小米或三星裝置）可能沒有以 AstroDX 開啟檔案的選項。" type="warn">
 
-Try one of these options:
-[**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver&hl=en) /
-[**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files&pcampaignid=web_share)
+嘗試以下的工具：
+[**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) /
+[**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files)
 
-For these file managers, if you don't see the `Open with...` prompt, you may be able to access it using the **Share function** instead.
+如果這些檔案管理員中皆沒有`選擇開啟工具`選項，請改用其`分享`按鈕。
 </Callout>
 
-Rename any `.adx` file back into `.zip` to extract it as usual.
+將 `.adx` 檔案重新命名為 `.zip` 以解壓縮檔案。
 
-<Callout title="Android's limitation: .adx files cannot be larger than 2GB">
+<Callout title="安卓限制：.adx 檔案大小不得大於 2GB">
 
-You will encounter errors when attempting to install .adx archives that are larger than 2GB in size. <br />This is a hard Android requirement, and we **cannot fix this.**<br />
-We **plan to address this in the future**.
+
+如果檔案大小超過 2GB 將顯示錯誤。<br />此為安卓本身的限制，我們目前**無法**修復它。<br />
+但我們未來**可能**想辦法突破此限制。
 </Callout>
 
-### Manual import
+### 自行導入
 
-Installing levels like older versions is still supported.
+用老方式安裝歌曲也是可行的。
 
-To install collections, you’ll need to create and author a manifest file. Learn more about it here: [wip]
+您必須自行編寫一份元資料（metadata）以安裝歌曲分類。在此了解更多：[正在努力編寫中...]
 
-## Updating from older versions
+## 更新 AstroDX
 
-AstroDX automatically transfers your levels, collections and scores to the new version.
+AstroDX 在更新過程中會將**所有**資料一併遷移至新版本。
 
-If it fails, a backup file is available in the root folder of AstroDX, and you can open up a thread in the [#help](https://discord.com/channels/892807792996536453/1017394299933044847) forums.
+如果在此過程中失敗，將會在 AstroDX 的根資料夾中儲存備份檔。請在 [#help](https://discord.com/channels/892807792996536453/1017394299933044847) 頻道中建立新的貼文回報。
 
-# FAQ (Fully Anticipated Questions)
+# 常見問題回答
 
 <Accordions>
-	<Accordion title="I've put the .rar/.zip file into `/levels`, but it's still not working!">
+	<Accordion title="我已經將 .rar/.zip 檔放在 levels 資料夾內了，怎麼跑不出曲目？">
 
-That's the old way of doing things. It'll still technically work for solo levels, but collections are now done differently. Arguably, better.
+	那是以前的安裝方法了。雖然對於單曲可能可行，不過只要涉及歌曲分類就得換個方式安裝。
 
-    If you’re using 2.0 Beta 2 Patch 4 or later, you’re probably better off using [the .adx archive method](#installing-levels).
+    如果您現正使用 Beta 2 版號 4 或更新的版本，我們推薦使用[這種安裝方式](#installing-levels)。
     </Accordion>
 
-    <Accordion title="Is there a way to turn off Notifications? I keep on sliding it down.">
-
-    Fortunately for you, there is a Guided Access-like feature in Android.
-
-    It’s called Pin app, and how you turn it on depends on what device you are using.
-
-    Except if you’re using a Xiaomi. If you are, you’re SOL. Sorry.
+    <Accordion title="有沒有辦法在打音遊時暫時關閉通知中心？常常會不小心滑到。">
+	您可以將 AstroDX 釘選在最上層。
     </Accordion>
 
-<Accordion title="I've put the mv.mp4 (or bg.mp4) file into the folder, but it isn't playing!">
-
-    AstroDX only detects `pv.mp4` for video files. `mv.mp4` is what is needed to run the video in [Majdata](https://rentry.org/maiguide).
+<Accordion title="我的 PV 已經放在資料夾內了，但它沒有在播放！">
+	請檢查是否在設定中關閉 PV 設定，並且確認 PV 的檔案名稱為 `pv.mp4`。順代一提，`mv.mp4` 是專門在
+    [Majdata](https://rentry.org/maiguide) 跑的。
     </Accordion>
 
-<Accordion title="Is there SD card support?">
+<Accordion title="目前支援 SD 卡載入歌曲嗎？">
 
-    Unfortunately, not at this time. It is surprisingly complicated to implement support for SD cards.
+    因為取用 SD 卡上的資料比預期的困難許多，所以目前尚未支援。
 
-    Alternatively, you can *try* to find a way to make symlinks inside of Android (since it is basically Linux). I haven’t found a way to make it work yet. Good luck!
+    或是您可以試著利用軟連結（symlink）連結檔案，畢竟安卓也是 Linux 的分支。
     </Accordion>
 
-<Accordion title="Why isn't the game on the Google Play Store?">
-
-    We do not yet qualify for deployment on the Play Store, and we want to be a fully fleshed game before we do so.
-
-    Also, we might be on other app marketplaces instead of the Play Store due to exorbitant rates. It's not free.
+<Accordion title="為什麼 AstroDX 還沒在 Play Store 上？">
+	我們希望將程式碼改到一定的程度在上架，況且目前還是在雛型的階段。
+	加上在 Play Store 上上架要錢，所以我們也考慮轉移至其他平台上上架（例如 F-Droid）。
     </Accordion>
 
-<Accordion title="[2.0 Beta] Why are we changing the storage layout?">
+<Accordion title="[2.0 Beta] 為什麼資料夾的結構改變了？">
 
-    As you might have known, in previous versions of AstroDX, levels can be either put in the top-level (Directly inside the `levels` folder), or you can put one or more levels inside another named folder to make a **collection**. This made it easy to customize collections straight in the file system, though it also introduces some interesting problems.
+    您可能知道，在前幾個版本的 AstroDX，歌曲可以被直接放在 `levels` 資料夾，或是放在 levels
+    內的子資料夾當作一個**分類**。
+    這讓編輯歌曲分類的過程能直接在檔案管理員中完成，不過也產生了一些有趣的問題。
 
-    **You can’t use the same level in multiple collections.** Since collections exist as folders, it’s difficult to find a way to put the same level inside many folders at the same time. Even if it’s possible, managing shortcuts and links will certainly be difficult when it comes to deleting a level or moving a level elsewhere.
+    **您無法在多個分類中使用相同的歌曲**
+    因為分類都是以子資料夾的形式存在，將相同的歌曲一次放置在多個不同分類是有難度的。即使使用軟連結，在移除、管理、變更歌曲時將會十分困難。
 
+	**不同歌曲可以有相同的名稱。** 雖然我們使用子資料夾作為分類依據，
     **Multiple levels can have the same name.** Although we use folders to group levels, the levels are expanded into a singular list in the game. This makes it possible to have two or more folders of the same name, creating a key collision in the game’s dictionary of levels. And when you’re adding levels to a sea of folders, it’s difficult to identify whether a folder of the same name already exists.
 
     By using an alternative way to represent the collections, though we made it slightly more complex to edit collection data (which we’re working on adding an in-game collections manager to fix), we’re able to fix the issues mentioned above.
@@ -176,9 +173,6 @@ That's the old way of doing things. It'll still technically work for solo levels
 </Accordion>
 </Accordions>
 
-### **My god, I do not want to read any of that.**
+翻譯者：曾嘉禾（Oliver Tzeng）
 
-Cope, seethe, mald, and ping @davidscann in the AstroDX Discord server.
-**Just make sure to tell me that you’ve decided not to read the guide first.**
-
-<p className="font-serif text-center italic text-xl"> ✨ made with love 💖 </p>
+<p className="font-serif text-center italic text-xl"> ✨用心血製成的維基💖 </p>
