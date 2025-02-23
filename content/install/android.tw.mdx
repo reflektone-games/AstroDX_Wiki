@@ -36,7 +36,7 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 <Step>
 ### 安裝
 
-若遇到「無法安裝未識別的應用程式」等錯誤，請在設定中開啟安裝 APK 檔的權限。
+若遇到「無法安裝未識別的應用程式」等錯誤，請在設定中允許瀏覽器安裝 APK 檔的權限。
 
 </Step>
 
@@ -44,8 +44,6 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 ### 初始化 AstroDX
 
 安裝後，請開啟應用程式至少一次以完成初始化。
-
-這會讓歌曲的安裝更加輕鬆。
 
 </Step>
 </Steps>
@@ -67,11 +65,11 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
     title="譜面哪裡找？"
     href="https://discord.com/channels/892807792996536453/1081048213185900584"
   >
-    此連結通往 Discord 伺服器中 #chart-download-where 的頻道
+    在 #chart-download-where 的 Discord 頻道中
   </Card>
 </Cards>
 
-### **從 ADX 中導入**
+### **從 ADX 檔安裝**
 
 最為推薦的安裝方法，於 Beta 2 版號 4 後支援
 
@@ -89,15 +87,14 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 
 <Step>
   ### 大功告成
-  AstroDX
-  會[根據壓縮檔內容](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74)自動安裝歌曲。
+  AstroDX 會[根據壓縮檔內容](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74)自動安裝歌曲。
 </Step>
 
 </Steps>
 
-<Callout title="在某些裝置上（如小米或三星裝置）可能沒有以 AstroDX 開啟檔案的選項。" type="warn">
+<Callout title="在某些如小米或三星的裝置上可能沒有以 AstroDX 開啟檔案的選項。" type="warn">
 
-嘗試以下的工具：
+請先嘗試以下的工具：
 [**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) /
 [**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files)
 
@@ -109,13 +106,13 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 <Callout title="安卓限制：.adx 檔案大小不得大於 2GB">
 
 
-如果檔案大小超過 2GB 將顯示錯誤。<br />此為安卓本身的限制，我們目前**無法**修復它。<br />
+如果安裝檔案大小超過 2GB 將顯示錯誤。<br />此為安卓本身的限制，我們目前**無法**修復它。<br />
 但我們未來**可能**想辦法突破此限制。
 </Callout>
 
 ### 自行導入
 
-用老方式安裝歌曲也是可行的。
+此方法較為複雜
 
 您必須自行編寫一份元資料（metadata）以安裝歌曲分類。在此了解更多：[正在努力編寫中...]
 
@@ -141,10 +138,10 @@ AstroDX 在更新過程中會將**所有**資料一併遷移至新版本。
 
 <Accordion title="我的 PV 已經放在資料夾內了，但它沒有在播放！">
 	請檢查是否在設定中關閉 PV 設定，並且確認 PV 的檔案名稱為 `pv.mp4`。順代一提，`mv.mp4` 是專門在
-    [Majdata](https://rentry.org/maiguide) 跑的。
+    [Majdata](https://rentry.org/maiguide) 跑的，無法在 AstroDX 中通用。
     </Accordion>
 
-<Accordion title="目前支援 SD 卡載入歌曲嗎？">
+<Accordion title="目前支援使用 SD 卡載入歌曲嗎？">
 
     因為取用 SD 卡上的資料比預期的困難許多，所以目前尚未支援。
 
@@ -156,20 +153,18 @@ AstroDX 在更新過程中會將**所有**資料一併遷移至新版本。
 	加上在 Play Store 上上架要錢，所以我們也考慮轉移至其他平台上上架（例如 F-Droid）。
     </Accordion>
 
-<Accordion title="[2.0 Beta] 為什麼資料夾的結構改變了？">
+<Accordion title="[2.0 Beta] 為什麼資料結構跟以前不一樣？">
+    在前幾個版本的 AstroDX 中，歌曲可以被直接放在 `levels` 資料夾，或是放在 levels
+    內的子資料夾當作一個**分類**。不過這種方便的管理方式也產生了不少問題。
 
-    您可能知道，在前幾個版本的 AstroDX，歌曲可以被直接放在 `levels` 資料夾，或是放在 levels
-    內的子資料夾當作一個**分類**。
-    這讓編輯歌曲分類的過程能直接在檔案管理員中完成，不過也產生了一些有趣的問題。
+    **多個分類中不可有相同的歌曲名稱**
+    因為分類都是以子資料夾的形式存在，將相同的歌曲一次放置在多個不同分類是有難度的，更何況是移除、管理、變更一個歌曲的內容。
 
-    **您無法在多個分類中使用相同的歌曲**
-    因為分類都是以子資料夾的形式存在，將相同的歌曲一次放置在多個不同分類是有難度的。即使使用軟連結，在移除、管理、變更歌曲時將會十分困難。
+	**不同歌曲可以有相同的名稱**
+    即使歌曲是用不同的子資料夾區分類別，但在遊戲中仍會合併為一份清單。這使得不同分類內的相同歌曲產生衝突。
 
-	**不同歌曲可以有相同的名稱。** 雖然我們使用子資料夾作為分類依據，
-    **Multiple levels can have the same name.** Although we use folders to group levels, the levels are expanded into a singular list in the game. This makes it possible to have two or more folders of the same name, creating a key collision in the game’s dictionary of levels. And when you’re adding levels to a sea of folders, it’s difficult to identify whether a folder of the same name already exists.
-
-    By using an alternative way to represent the collections, though we made it slightly more complex to edit collection data (which we’re working on adding an in-game collections manager to fix), we’re able to fix the issues mentioned above.
-
+	這些問題使得我們必須使用新的分類方式作為替代方案。
+    雖然此分類方式較為複雜，但將來遊戲內將有分類編輯器，簡化管理分類的流程。
 </Accordion>
 </Accordions>
 
