@@ -8,48 +8,52 @@ import { source } from "@/lib/source";
 import { I18nProvider } from "fumadocs-ui/i18n";
 
 const inter = Inter({
-  subsets: ["latin"],
+	subsets: ["latin"],
 });
 
 export default async function Layout({
-  params,
-  children,
+	params,
+	children,
 }: {
-  params: Promise<{ lang: string }>;
-  children: ReactNode;
+	params: Promise<{ lang: string }>;
+	children: ReactNode;
 }) {
-  const lang = (await params).lang;
-  return (
-    <html lang={lang} className={inter.className} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
-        <I18nProvider
-          locale={lang}
-          locales={[
-            {
-              name: "English",
-              locale: "en",
-            },
-            {
-              name: "Chinese",
-              locale: "cn",
-            },
-            {
-              name: "Vietnamese",
-              locale: "vn",
-            },
-            {
-              name: "Japanese",
-              locale: "jp",
-            },
-          ]}
-        >
-          <RootProvider>
-            <DocsLayout tree={source.pageTree[lang]} {...baseOptions}>
-              {children}
-            </DocsLayout>
-          </RootProvider>
-        </I18nProvider>
-      </body>
-    </html>
-  );
+	const lang = (await params).lang;
+	return (
+		<html lang={lang} className={inter.className} suppressHydrationWarning>
+			<body className="flex flex-col min-h-screen">
+				<I18nProvider
+					locale={lang}
+					locales={[
+						{
+							name: "English",
+							locale: "en",
+						},
+						{
+							name: "简体中文",
+							locale: "cn",
+						},
+						{
+							name: "繁體中文",
+							locale: "tw",
+						},
+						{
+							name: "Vietnamese",
+							locale: "vn",
+						},
+						{
+							name: "Japanese",
+							locale: "jp",
+						},
+					]}
+				>
+					<RootProvider>
+						<DocsLayout tree={source.pageTree[lang]} {...baseOptions}>
+							{children}
+						</DocsLayout>
+					</RootProvider>
+				</I18nProvider>
+			</body>
+		</html>
+	);
 }
