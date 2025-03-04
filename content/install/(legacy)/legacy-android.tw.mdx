@@ -1,0 +1,174 @@
+---
+title: Android
+---
+
+![AstroDX Android Installation Banner](content/media/androidguidebanner.webp)
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+
+<Callout title="我們需要翻譯者！" type="info">
+  如果您想要為這個維基貢獻一份心力，請在 [AstroDX Discord
+  伺服器](https://discord.gg/6fpETgpvjZ) 中聯絡 @davidscann 以取得原文以及翻譯說明。
+</Callout>
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube-nocookie.com/embed/9rr9Ygmyymw?si=tTR3jRaRGG2r56bf"
+  title="YouTube 播放器"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+></iframe>
+請觀賞此
+[教學影片](https://www.youtube-nocookie.com/embed/9rr9Ygmyymw?si=tTR3jRaRGG2r56bf)
+以更清楚說明如何使用
+
+# 應用程式安裝
+
+<Steps>
+<Step>
+### 下載 APK 檔
+前往 [AstroDX GitHub 釋出版頁面](https://github.com/2394425147/maipaddx/releases)下載最新的 APK 檔。
+</Step>
+<Step>
+### 安裝
+
+若遇到「無法安裝未識別的應用程式」等錯誤，請在設定中允許瀏覽器安裝 APK 檔的權限。
+
+</Step>
+
+<Step>
+### 初始化 AstroDX
+
+安裝後，請開啟應用程式至少一次以完成初始化。
+
+</Step>
+</Steps>
+
+**裡面不會有任何預設的歌曲！**
+別擔心，我們會在**下個章節中**介紹如何載入自己的歌曲。
+
+# 安裝歌曲
+
+<Callout>
+  如果您正使用較舊的 **AstroDX 版本（2.0 前）**，請查看[此教學](/install/legacy-android)
+  不過舊版支援度不高。
+</Callout>
+
+### 譜面（歌曲的檔案）哪裡找？
+
+<Cards>
+  <Card
+    title="譜面哪裡找？"
+    href="https://discord.com/channels/892807792996536453/1081048213185900584"
+  >
+    在 #chart-download-where 的 Discord 頻道中
+  </Card>
+</Cards>
+接下來是如何安裝歌曲
+
+### **從 ADX 檔安裝歌曲**
+
+最為推薦的安裝方法，於 Beta 2 版號 4 後支援
+
+<Steps>
+
+<Step>
+    ### 重新命名 ZIP 檔副檔名
+    將所有 `.zip` 檔直接**重新命名**為 `.adx` 檔
+</Step>
+
+<Step>
+    ### 選擇開啟工具 > AstroDX
+    在任何資料管理員中點選 `選擇開啟工具 > AstroDX`
+</Step>
+
+<Step>
+  ### 大功告成
+  AstroDX 會[根據壓縮檔內容](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74)自動安裝歌曲。
+</Step>
+
+</Steps>
+
+<Callout title="在某些如小米或三星的裝置上可能沒有以 AstroDX 開啟檔案的選項。" type="warn">
+
+請先嘗試以下的工具：
+[**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) /
+[**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files)
+
+如果這些檔案管理員中皆沒有`選擇開啟工具`選項，請改用其`分享`按鈕。
+</Callout>
+
+將 `.adx` 檔案重新命名為 `.zip` 以解壓縮檔案。
+
+<Callout title="安卓限制：.adx 檔案大小不得大於 2GB">
+
+
+如果安裝檔案大小超過 2GB 將顯示錯誤。<br />此為安卓本身的限制，我們目前**無法**修復它。<br />
+但我們未來**可能**想辦法突破此限制。
+</Callout>
+
+### 自行導入
+
+此方法較為複雜
+
+您必須自行編寫一份元資料（metadata）以安裝歌曲分類。在此了解更多：[正在努力編寫中...]
+
+## 更新 AstroDX
+
+AstroDX 在更新過程中會將**所有**資料一併遷移至新版本。
+
+如果在此過程中失敗，將會在 AstroDX 的根資料夾中儲存備份檔。請在 [#help](https://discord.com/channels/892807792996536453/1017394299933044847) 頻道中建立新的貼文回報。
+
+# 常見問題回答
+
+<Accordions>
+	<Accordion title="我已經將 .rar/.zip 檔放在 levels 資料夾內了，怎麼跑不出曲目？">
+
+	那是以前的安裝方法了。雖然對於單曲可能可行，不過只要涉及歌曲分類就得換個方式安裝。
+
+    如果您現正使用 Beta 2 版號 4 或更新的版本，我們推薦使用[這種安裝方式](#installing-levels)。
+    </Accordion>
+
+    <Accordion title="有沒有辦法在打音遊時暫時關閉通知中心？常常會不小心滑到。">
+	您可以將 AstroDX 釘選在最上層。
+    </Accordion>
+
+<Accordion title="我的 PV 已經放在資料夾內了，但它沒有在播放！">
+	請檢查是否在設定中關閉 PV 設定，並且確認 PV 的檔案名稱為 `pv.mp4`。順代一提，`mv.mp4` 是專門在
+    [Majdata](https://rentry.org/maiguide) 跑的，無法在 AstroDX 中通用。
+    </Accordion>
+
+<Accordion title="目前支援使用 SD 卡載入歌曲嗎？">
+
+    因為取用 SD 卡上的資料比預期的困難許多，所以目前尚未支援。
+
+    或是您可以試著利用軟連結（symlink）連結檔案，畢竟安卓也是 Linux 的分支。
+    </Accordion>
+
+<Accordion title="為什麼 AstroDX 還沒在 Play Store 上？">
+	我們希望將程式碼改到一定的程度在上架，況且目前還是在雛型的階段。
+	加上在 Play Store 上上架要錢，所以我們也考慮轉移至其他平台上上架（例如 F-Droid）。
+    </Accordion>
+
+<Accordion title="[2.0 Beta] 為什麼資料夾結構跟以往不同？">
+在前幾個版本的 AstroDX 中，歌曲可以被直接放在 `levels` 資料夾，或是放在 levels
+    內的子資料夾當作一個**分類**。不過這種方便的管理方式也產生了不少問題。
+
+    **多個分類中不可有相同的歌曲名稱**
+    因為分類都是以子資料夾的形式存在，將相同的歌曲一次放置在多個不同分類是有難度的，更何況是移除、管理、變更一個歌曲的內容。
+
+	**不同歌曲可以有相同的名稱**
+    即使歌曲是用不同的子資料夾區分類別，但在遊戲中仍會合併為一份清單。這使得不同分類內的相同歌曲產生衝突。
+
+	這些問題使得我們必須使用新的分類方式作為替代方案。
+    雖然此分類方式較為複雜，但將來遊戲內將有分類編輯器，簡化管理分類的流程。
+</Accordion>
+</Accordions>
+
+翻譯者：曾嘉禾（Oliver Tzeng）
+
+<p className="font-serif text-center italic text-xl"> ✨用心血製成的維基💖 </p>

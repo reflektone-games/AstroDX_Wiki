@@ -45,7 +45,7 @@ In `app/[lang]/layout.tsx`, under `locales`, add an entry like this:
 In `lib/i18n.ts`, under `languages`, add the two letter designation you gave for your language.
 ex.
 ```
-languages: ["en", "cn", "vn", "jp", "your_language"],
+languages: ["en", "cn", "tw", "vn", "jp", "your_language"],
 ```
 ***
 Under `content/` and `content/install/` you will see a few .mdx files.
