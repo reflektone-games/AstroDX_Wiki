@@ -1,8 +1,11 @@
-# adx-wiki
+# adx-wiki-JP
+
+JP translation for [AstroDXwiki](https://wiki.astrodx.com)
 
 This is a Next.js application generated with
 [Create Fumadocs](https://github.com/fuma-nama/fumadocs).
 
+=======
 Run development server:
 
 ```bash
@@ -60,7 +63,7 @@ To preview your translation and what they look like, save your document and go t
 Thanks for your interest in this project! We'd also like to keep in touch with you, in case the content changes or more content is added in the future (it's okay if you don't want to though).
 
 If you have any questions, feel free to pass them to @davidscann.
-
+  
 ## Learn More
 
 To learn more about Next.js and Fumadocs, take a look at the following
