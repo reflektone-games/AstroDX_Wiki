@@ -1,6 +1,4 @@
-# adx-wiki-JP
-
-JP translation for [AstroDXwiki](https://wiki.astrodx.com)
+# AstroDX Wiki
 
 This is a Next.js application generated with
 [Create Fumadocs](https://github.com/fuma-nama/fumadocs).
