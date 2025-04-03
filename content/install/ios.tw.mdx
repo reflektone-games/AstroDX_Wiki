@@ -1,0 +1,266 @@
+---
+title: iOS/iPadOS
+---
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+import { Card, Cards } from "fumadocs-ui/components/card";
+
+![Guide banner with text that says: AstroDX Installation Guide (iOS / iPadOS Edition)](content/media/adx_iosguide.webp)
+
+
+<Callout title="我們需要翻譯者！" type="info">
+  如果您想要為這個維基貢獻一份心力，請在 [AstroDX Discord
+  伺服器](https://discord.gg/6fpETgpvjZ) 中聯絡 @davidscann 以取得原文以及翻譯說明。
+</Callout>
+
+# 安裝 AstroDX
+
+<Steps>
+
+<Step>
+  ### 安裝 TestFlight
+  請先安裝 [TestFlight](https://apps.apple.com/ca/app/testflight/id899247664) 應用程式。
+</Step>
+
+<Step>
+### TestFlight 邀請
+
+如果您想要在有空欄位時收到通知可以加入我們的 [Discord 伺服器](https://sht.moe/astrodx)
+
+<Accordions>
+<Accordion title="Testflight 連結">
+	<Cards>
+	<Card
+	href="https://testflight.apple.com/join/rACTLjPL"
+	title="組別 A"
+	>
+	</Card>
+	<Card
+	href="https://testflight.apple.com/join/ocj3yptn"
+	title="組別 B"
+	>
+	</Card>
+	<Card
+	href="https://testflight.apple.com/join/CuMxZE2M"
+	title="組別 C"
+	>
+	</Card>
+	<Card
+	href="https://testflight.apple.com/join/T6qKfV6f"
+	title="組別 D"
+	>
+  </Card>
+	<Card
+	href="https://testflight.apple.com/join/sMm1MCYc"
+	title="組別 E"
+	>
+	</Card>
+	</Cards>
+
+</Accordion>
+</Accordions>
+</Step>
+<Step>
+### 初始化 AstroDX
+
+安裝後，請開啟應用程式至少一次以完成初始化。
+</Step>
+</Steps>
+
+
+**裡面不會有任何預設的歌曲！**
+別擔心，我們會在**下個章節中**介紹如何載入自己的歌曲。
+
+# 安裝歌曲
+
+<Callout>
+  如果您正使用較舊的 **AstroDX 版本（2.0 前）**，請查看[此教學](/install/legacy-android)
+  不過舊版支援度不高。
+</Callout>
+
+### 譜面（歌曲的檔案）哪裡找？
+
+<Cards>
+  <Card
+    title="譜面下載連結"
+    href="https://discord.com/channels/892807792996536453/1081048213185900584"
+  >
+    在 #chart-download-where 的 Discord 頻道中
+  </Card>
+</Cards>
+
+接下來是如何安裝歌曲
+
+<Steps>
+<Step>
+### 找到應用程式資料夾
+請先使用「檔案」應用程式找到 `AstroDX` 資料夾。
+<Callout
+title="您是否在電腦上下載歌曲？"
+>
+
+您可以直接將手機連接電腦，並將曲目放置在手機上的 `AstroDX` 資料夾內，或是使用 AirDrop
+    如果您是 Windows 或 Linux
+    使用者可以[安裝 AirDrop 的開源替代品](#localsend--an-open-source-alternative-to-airdrop)
+    </Callout>
+
+</Step>
+<Step>
+### 安裝譜面
+- 最近的 AstroDX 更新讓安裝譜面的過程簡易許多。
+
+**「歌曲系列」是指含有多個譜面的資料夾。** 資料夾結構如下：`24. PRiSM/Chronomia`
+
+<Accordions>
+<Accordion
+title="**從 ADX 檔安裝歌曲**">
+    最為推薦的安裝方法，於 Beta 2 版號 4 後支援
+	<Steps>
+    <Step>
+    重新命名 ZIP 檔副檔名
+    	<p className="text-sm opacity-50">將所有 `.zip` 檔直接**重新命名**為 `.adx` 檔</p>
+    </Step>
+	<Step>
+    將 .adx 檔案移至 `AstroDX` 資料夾
+    	<p className="text-sm opacity-50">注意：不是`levels` 資料夾！</p>
+    </Step>
+    <Step>
+
+</Step>
+</Steps>
+</Accordion>
+</Accordions>
+  ### 大功告成
+  AstroDX 會[根據壓縮檔內容](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74)自動安裝歌曲。
+</Step>
+</Steps>
+
+If you want to change the collection details, like say add a new single chart into a collection, it becomes a bit more complicated.
+
+<Callout title="接下來是客製化歌曲系列的教學">
+  若您沒有想要客製化歌曲系列，可以直接**跳過此段文章**，或甚至直接關閉此維基（因為譜面已安裝完成）
+</Callout>
+在 AstroDX 資料夾內有兩個需要注意的資料夾：`collections` 和 `levels`。
+在 `collecitons` 資料夾中僅有儲存歌曲系列的資料，而在 `levels` 中主要儲存譜面本身。
+
+若欲更改歌曲系列，請編輯 [`collections/manifest.json`](https://astrodx.notion.site/Collection-Manifest-Details-8f966de6971748e0ac01c0a0a6054594) 檔案。
+
+但簡單而言，在 `manifest.json` 中會有這種格式：
+```json
+{
+  "name": "歌曲系列名稱",
+  "id": null, // 請忽略
+  "serverUrl": null, // 請忽略
+  "levelIds": ["在此的每個曲目", "都是在 levels 內的", "資料夾名稱"]
+}
+```
+
+#### LocalSend – AirDrop 的開源替代品
+
+支援 iOS、Android、macOS、Windows、和Linux
+
+<Cards>
+  <Card
+    title="App Store"
+    href="https://apps.apple.com/tw/app/localsend/id1661733229"
+  ></Card>
+  <Card
+    title="官網"
+    href="https://localsend.org/"
+  ></Card>
+</Cards>
+Make sure that both devices are on the same WiFi network.
+
+Keep the LocalSend app open on your mobile device. On your PC:
+
+<Steps>
+  <Step> 開啟「傳送」標籤頁</Step>
+  <Step>
+    {" "}
+    選擇「檔案」然後選擇欲安裝的 `.adx` 檔案{" "}
+  </Step>
+  <Step>
+    {" "}
+    您的裝置應該也會在此顯示。若名稱未更改將會有隨機的英文名稱，如 `Happy Sea`，請選擇它。{" "}
+  </Step>
+  <Step>
+    {" "}
+    連接完成後，允許傳送檔案權限。{" "}
+  </Step>
+  <Step>檔案應該會儲存於 `LocalSend` 資料夾內。</Step>
+  <Step>
+    {" "}
+    最後將 `.adx` 檔案移動至 AstroDX 資料夾中{" "}
+  </Step>
+</Steps>
+大功告成
+
+# FAQ (Fully Anticipated Questions)
+
+<Accordions>
+
+	<Accordion title="我已經將 .rar/.zip 檔放在 levels 資料夾內了，怎麼跑不出曲目？">
+
+	那是以前的安裝方法了。雖然對於單曲可能可行，不過只要涉及歌曲分類就得換個方式安裝。
+
+    如果您現正使用 Beta 2 版號 4 或更新的版本，我們推薦使用[這種安裝方式](#installing-levels)。
+    </Accordion>
+
+    <Accordion title="有沒有辦法在打音遊時暫時關閉通知中心？常常會不小心滑到。">
+    使用[**引導使用模式**](https://www.google.com/search?q=iOS+引導使用模式).
+    </Accordion>
+
+    <Accordion
+    title="有關檔案支援"
+    >
+	以下為 AstroDX 支援的檔案格式：
+    	- **影片：** H.264
+    	- **音檔：** `.ogg`、`.oga`、以及 `.mp3`
+    </Accordion>
+
+<Accordion title="我的 PV 已經放在資料夾內了，但它沒有在播放！">
+	請檢查是否在設定中關閉 PV 設定，並且確認 PV 的檔案名稱為 `pv.mp4`。順代一提，`mv.mp4` 是專門在
+    [Majdata](https://rentry.org/maiguide) 跑的，無法在 AstroDX 中通用。
+    </Accordion>
+
+<Accordion title="為什麼 AstroDX 還沒在 App Store 上？">
+	我們希望將程式碼改到一定的程度在上架，況且目前還是在雛型的階段。
+	加上在 App Store 上上架要錢，所以目前沒有上架的打算。
+    </Accordion>
+
+<Accordion title="為什麼你們不編譯 `.ipa` 檔？">
+
+我們不這麼做是基於幾個原因：
+
+    > 目前我們不建議側載 `.ipa` 檔，加上 `.ipa` 檔十分容易被竄改，然後被有意人士放在 App Store
+    > 上。為了防止其發生我們暫時不提供 `.ipa` 檔。
+
+    </Accordion>
+
+    <Accordion title="為什麼 Testflight 的測試欄位那麼容易滿？">
+    太多人想玩 AstroDX 了。
+    </Accordion>
+    <Accordion title="為什麼不建立更多測試組別？">
+    建立這些組別要錢。
+    </Accordion>
+
+
+<Accordion title="[2.0 Beta] 為什麼資料夾結構跟以往不同？">
+在前幾個版本的 AstroDX 中，歌曲可以被直接放在 `levels` 資料夾，或是放在 levels
+    內的子資料夾當作一個**分類**。不過這種方便的管理方式也產生了不少問題。
+
+    **多個分類中不可有相同的歌曲名稱**
+    因為分類都是以子資料夾的形式存在，將相同的歌曲一次放置在多個不同分類是有難度的，更何況是移除、管理、變更一個歌曲的內容。
+
+	**不同歌曲可以有相同的名稱**
+    即使歌曲是用不同的子資料夾區分類別，但在遊戲中仍會合併為一份清單。這使得不同分類內的相同歌曲產生衝突。
+
+	這些問題使得我們必須使用新的分類方式作為替代方案。
+    雖然此分類方式較為複雜，但將來遊戲內將有分類編輯器，簡化管理分類的流程。
+</Accordion>
+</Accordions>
+
+翻譯者：曾嘉禾（Oliver Tzeng）
+
+<p className="font-serif text-center italic text-xl"> ✨用心血製成的維基💖 </p>
