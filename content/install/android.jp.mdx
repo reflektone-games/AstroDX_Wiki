@@ -27,150 +27,198 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
 
 <Steps>
 <Step>
-### Downloading the APK
-Head to the official [AstroDX GitHub Releases](https://github.com/2394425147/maipaddx/releases) page in order to download the APK.
+### APKファイルをダウンロードする
+公式GithubページのRelease [AstroDX GitHub Releases](https://github.com/2394425147/maipaddx/releases) に遷移し、APKファイルをダウンロードします。
 </Step>
 <Step>
 ### Installing
 
-For many Android devices, it will tell you that for security reasons, [your browser] is not allowed to install unknown apps.
-
-However, just go into the settings and enable the permission for your browser. It's that simple.
+多くのAndroidデバイスでは、セキュリティ上の理由からブラウザからのアプリインストールが制限されています。
+そのため、設定から「不明なアプリのインストール」を許可してください。APKファイルをインストーラで開こうとすると表示される設定から変更できます。
 
 </Step>
 
 <Step>
-### Initializing AstroDX
+### AstroDXの初期設定
 
-After installing the game, you should open it up at least once in order to initialize the game.
-
-This will make it easier for you to install your songs later.
+インストールが完了したら、初期化のため、一度AstroDXを起動します。
+起動したら、閉じてください。
 
 </Step>
 </Steps>
 
-**There won’t be any songs by default!** That’s ok, we’ll get songs later **in the next section**.
+**え、曲が入っていない？**  **次のセクション**で説明します。
 
-# Installing Levels
+# 曲のインストール
 
 <Callout>
-  If you're using an older version of **AstroDX e.g. 2.0 pre-beta** or an
-  earlier version, please [go here for instructions.](/install/legacy-android) Do note that support is
-  not guaranteed on legacy versions of the game.
+  もし**AstroDX e.g. 2.0 pre-beta** か以前のバージョンをご利用の場合は [こちらをご覧ください(英語)。](/install/legacy-android) 
+場合によってはサポートを受けられない場合があります。
 </Callout>
 
-### Where are the charts?
+### 譜面データはどこですか？
 
-Let's get this out of the way.
+以下のリンクにあります。（公式Discord内でGoogle driveのリンクを提供しています）
 
 <Cards>
   <Card
-    title="Chart download where?"
-    href="https://discord.com/channels/892807792996536453/1081048213185900584"
+    title="譜面どこ？"
+    href="https://discord.com/channels/892807792996536453/109669400848866"
   >
-    The question you've all been waiting for. Maybe. Probably.
+    Google driveのリンクです。アプリではフォルダのダウンロードはサポートしていないので、ブラウザで開き、PC版サイト/レイアウトに変更してください。
+    質問があればDiscordの#general-日本語へいらしてください。
   </Card>
 </Cards>
 
-### **Import via ADX archive** **(Recommended, Beta 2 Patch 4 and later)**
+### **ADX archiveを利用したインポート** **(Recommended, Beta 2 Patch 4 and later)**
 
-This is the primary way to install levels, and it’s incredibly easy to get started.
+複数の曲を同時にインポートする場合の方法です。公式譜面を利用する際に重宝します。
 
 <Steps>
 
 <Step>
-  ### Rename your zip file
-  Any given `.zip` file of a level or multiple levels can be **renamed** into a `.adx` file.
+  ### zipファイルの拡張子を変更する
+  ファイルマネージャを使用し、ダウンロードした `.zip` の**拡張子** を `.adx` にリネームします。ファイル名の部分も、あなたが望むコレクション名に変更しておいてください。
 </Step>
 
 <Step>
-  ### Open with... > AstroDX
-  On supported devices, tap on the file in any file manager, and select `Open with… > AstroDX`
+  ### AstroDXで開く
+  ファイルマネージャでadxファイルを選択し、`AstroDX`で開いてください。
 </Step>
 
 <Step>
-  ### Profit
-  AstroDX will automatically install levels for you [depending on what the archive contains](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74).
+  ### 確認
+  AstroDX が自動で曲，コレクションを構築します。 [adxファイルの中身に依存します。](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74).
 </Step>
 
 </Steps>
 
-<Callout title="On some devices, (for example Xiaomi or some Samsung devices), your file manager may not offfer the option to open with AstroDX." type="warn">
+<Callout title="XiaomiやSamsungの端末のファイルマネージャでは、「～で開く」が出来ない場合があります。その場合は共有オプションを利用してください！" type="warn">
 
-Try one of these options:
-[**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) /
-[**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files)
+うまくいかない場合、ファイル構造が誤っている可能性があります。これらのアプリで`.adx`を`.zip`に戻したうえで、展開して構造を確認することができます。
+[**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver&hl=en) /
+[**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files&pcampaignid=web_share)
+[**ファイルマネージャ**](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager)
 
+また、2GBを超えるadxファイルのインポートは，Androidの制約上出来ません。
 </Callout>
 
-Rename any `.adx` file back into `.zip` to extract it as usual.
+### 手動での曲インポート
 
-### Manual import
+旧バージョンでのインポートは引き続き利用できます。
 
-Installing levels like older versions is still supported.
+ただし、ジャンル分けを行う場合は、 `manifest.json`を編集する必要があります。 
 
-To install collections, you’ll need to create and author a manifest file. Learn more about it here: [wip]
+また，これらはdataフォルダへのアクセスを伴います。権限移譲のミスによりアクセスが付与されない場合があり、
+PCを使用するか旧バージョンのファイルアプリを利用した抜け道を使う必要があります。
+詳細はDiscordで質問してください。
 
-## Updating from older versions
+## 旧バージョンからのアップデート
 
-AstroDX automatically transfers your levels, collections and scores to the new version.
+アプリを更新した後にAstroDXを起動すると、自動で新バージョンへコレクションと曲データ、スコアの引継ぎを行います。
 
-If it fails, a backup file is available in the root folder of AstroDX, and you can open up a thread in the [#help](https://discord.com/channels/892807792996536453/1017394299933044847) forums.
+もし失敗したら、 AstroDXのルートフォルダ(`Android/data/com.Reflektone.AstroDX/files`)に存在する`cache`ファイルのバックアップを取り出し、Discordの [#general-日本語](https://discord.com/channels/892807792996536453/1054390514583097414) フォーラムで質問してください。
 
-# FAQ (Fully Anticipated Questions)
+# 既存のコレクションへのインポートを含む楽曲追加について
+
+<Callout title="コレクションをさらに変更しますか？">
+  **何も変更する気がなければ、次のセクションを飛ばすか**(または、完了したのでガイドを終了しても大丈夫です)。
+</Callout>
+
+まず、曲データの配置について示します。
+楽曲については、すべて以下のファイル階層構造に従います。
+
+ Android/data/com.Reflektone.AstroDX/files
+<Files>
+  <Folder name="cache"/>
+  <File name="settings.json"/>
+  <Folder name="collection"/>
+  <Folder name="levels" defaultOpen>
+  <Folder name="曲" defaultOpen>
+    <File name="bg.jpg（カバーアート）" />
+    <File name="mv.mp4（動画）"　/>
+    <File name="maidata.txt　（譜面データ）" />
+    <File name="track.ogg/mp4　（音源）" />
+  </Folder>
+  </Folder>
+</Files>
+
+要するに、曲名フォルダに音源、カバーアート、譜面などを入れて、そのフォルダを`levels`フォルダ内に配置することで曲がAstroDXに追加されます。
+曲を追加したら、AstroDXを開き、曲の再読み込みを行ってください！
+dataフォルダにアクセスするため、アクセス権が必要です。PCを使用すると容易です。
+
+ただし、これだけではコレクション分け（バージョンによる分類）は完了していません。続けて読んでください。
+
+コレクションを追加/編集するには、manifest.jsonを編集する必要があります。
+manifest.jsonの場所は以下の通りです。
+
+AstroDX
+<Files>
+  <Folder name="collection" defaultOpen>
+    <Folder name="コレクション名" defaultOpen>
+    <File name="manifest.json" />
+    </Folder>
+  </Folder>
+</Files>
+
+`manifest.json`の書式を以下に示します。
+
+```json
+{
+  "name": "コレクション名",
+  "id": null, // これは無視してもいい
+  "serverUrl": null, // これは無視してもいい
+  "levelIds": ["曲1", "曲2", "…曲n"]
+}
+```
+```
+前節でadxファイルを使用して曲をインストールした場合、既にいくつかのバージョンについてjsonファイルが生成されているはずです。
+jsonファイルを編集できる環境（PCで編集し、ドライブを経由して端末に導入することを推奨します）が得られたら、
+`“levelIds”:[]`の中に””で囲う形で曲名を追加入力します。曲と曲の間のカンマを忘れずに！（筆者は何度もこのミスを犯しています。）
+以上を終えたら、AstroDXを新しく起動して、譜面の再読み込みボタンを押せば完了です!
+```
+
+# FAQ
 
 <Accordions>
-	<Accordion title="I've put the .rar/.zip file into `/levels`, but it's still not working!">
+	<Accordion title=".rar/.zip ファイルを`/levels`, に入れたが起動しない！">
 
-That's the old way of doing things. It'll still technically work for solo levels, but collections are now done differently. Arguably, better.
+    仕様が変更されています。
+    まずは中のファイルを解凍する必要があります。上記のフォルダ構造と一致するようにしてください。
+    2.0 Beta 2 Patch 4 以降のデータを使用する場合、 .adxアーカイブの方法を使った方がいいと思います。
+  </Accordion>
+  <Accordion title="通知を切る方法がありますか？">
+   Androidにも、iOSのアクセスガイドに類似した機能（ピン機能）があります！（ただし、Xiaomiはこれをサポートしません）
+  </Accordion> 
 
-    If you’re using 2.0 Beta 2 Patch 4 or later, you’re probably better off using [the .adx archive method](#installing-levels).
+<Accordion title="mv.mp4 (or bg.mp4) を入れたが、 MVが再生されない。">
+
+    AstroDX は `pv.mp4` のみをMVとしてサポートします。 `mv.mp4` は [Majdata](https://rentry.org/maiguide)でのサポート形式です。
     </Accordion>
 
-    <Accordion title="Is there a way to turn off Notifications? I keep on sliding it down.">
+<Accordion title="SDカードはサポートされてますか？">
 
-    Fortunately for you, there is a Guided Access-like feature in Android.
+    SDカードはサポートされていません。
 
-    It’s called Pin app, and how you turn it on depends on what device you are using.
-
-    Except if you’re using a Xiaomi. If you are, you’re SOL. Sorry.
+    (Linuxベースの)symlinks inside と呼ばれる機能があるようなので、調査してみてください！
     </Accordion>
 
-<Accordion title="I've put the mv.mp4 (or bg.mp4) file into the folder, but it isn't playing!">
+<Accordion title="Google Play ストアにAstroDXが無いのはどうして？">
 
-    AstroDX only detects `pv.mp4` for video files. `mv.mp4` is what is needed to run the video in [Majdata](https://rentry.org/maiguide).
+    ゲームが再現である以上、Play Store審査を通していないからです。APKファイルを利用してくださいね。
     </Accordion>
 
-<Accordion title="Is there SD card support?">
+<Accordion title="[2.0 Beta] ストレージレイアウトが変更されましたか？">
 
-    Unfortunately, not at this time. It is surprisingly complicated to implement support for SD cards.
+    以前のバージョンのAstroDX,では、`levels` フォルダ内に**コレクション**フォルダを作成し、そこに譜面データを入れていました。簡単な方法でしたが、問題点がありました。
 
-    Alternatively, you can *try* to find a way to make symlinks inside of Android (since it is basically Linux). I haven’t found a way to make it work yet. Good luck!
-    </Accordion>
+    **「同じ曲を複数コレクションで利用できない。」**コレクションはフォルダとして存在するため、同じレベルを同時に複数のフォルダに入れる方法を見つけるのは困難です。たとえ可能だとしても、譜面を削除したり、別の場所に移動したりする場合、ショートカットやリンクの管理は確実に難しくなります。
 
-<Accordion title="Why isn't the game on the Google Play Store?">
+    **「複数の譜面が同じ名前を持つ可能性がある。」** 譜面をグループ化するためにフォルダを使用していますが、譜面はゲーム内で単一のリストに展開されます。これにより、同じ名前のフォルダが複数存在し、ゲームの譜面の辞書でキーの衝突が発生する可能性があります。また、大量のフォルダに譜面を追加している場合、同じ名前のフォルダがすでに存在するかどうかを識別するのは困難です。
 
-    We do not yet qualify for deployment on the Play Store, and we want to be a fully fleshed game before we do so.
-
-    Also, we might be on other app marketplaces instead of the Play Store due to exorbitant rates. It's not free.
-    </Accordion>
-
-<Accordion title="[2.0 Beta] Why are we changing the storage layout?">
-
-    As you might have known, in previous versions of AstroDX, levels can be either put in the top-level (Directly inside the `levels` folder), or you can put one or more levels inside another named folder to make a **collection**. This made it easy to customize collections straight in the file system, though it also introduces some interesting problems.
-
-    **You can’t use the same level in multiple collections.** Since collections exist as folders, it’s difficult to find a way to put the same level inside many folders at the same time. Even if it’s possible, managing shortcuts and links will certainly be difficult when it comes to deleting a level or moving a level elsewhere.
-
-    **Multiple levels can have the same name.** Although we use folders to group levels, the levels are expanded into a singular list in the game. This makes it possible to have two or more folders of the same name, creating a key collision in the game’s dictionary of levels. And when you’re adding levels to a sea of folders, it’s difficult to identify whether a folder of the same name already exists.
-
-    By using an alternative way to represent the collections, though we made it slightly more complex to edit collection data (which we’re working on adding an in-game collections manager to fix), we’re able to fix the issues mentioned above.
-
+    コレクションを表現する別の方法を使用することで、コレクションデータの編集が若干複雑になりましたが（この問題を修正するために、ゲーム内コレクションマネージャーの追加に取り組んでいます）、上記の問題を修正することができます。
+        
 </Accordion>
 </Accordions>
 
-### **My god, I do not want to read any of that.**
-
-Cope, seethe, mald, and ping @davidscann in the AstroDX Discord server.
-**Just make sure to tell me that you’ve decided not to read the guide first.**
-
-<p className="font-serif text-center italic text-xl"> ✨ made with love 💖 </p>
+<p className="font-serif text-center italic text-xl"> 翻訳: @massan7071 (on discord) & @hptuse </p>
