@@ -65,6 +65,7 @@ import { Card, Cards } from "fumadocs-ui/components/card";
 ### 初始化 AstroDX
 
 安裝後，請開啟應用程式至少一次以完成初始化。
+這會讓你在稍後更容易添加歌曲。
 </Step>
 </Steps>
 
@@ -73,11 +74,6 @@ import { Card, Cards } from "fumadocs-ui/components/card";
 別擔心，我們會在**下個章節中**介紹如何載入自己的歌曲。
 
 # 安裝歌曲
-
-<Callout>
-  如果您正使用較舊的 **AstroDX 版本（2.0 前）**，請查看[此教學](/install/legacy-android)
-  不過舊版支援度不高。
-</Callout>
 
 ### 譜面（歌曲的檔案）哪裡找？
 
@@ -117,13 +113,16 @@ title="您是否在電腦上下載歌曲？"
 title="**從 ADX 檔安裝歌曲**">
     最為推薦的安裝方法，於 Beta 2 版號 4 後支援
 	<Steps>
+	<Step>
+	下載你想要的譜面/歌曲系列的`.zip`檔案。
+	</Step>
     <Step>
     重新命名 ZIP 檔副檔名
-    	<p className="text-sm opacity-50">將所有 `.zip` 檔直接**重新命名**為 `.adx` 檔</p>
+    	<p className="text-sm opacity-50">將所有 `.zip` 檔直接**重新命名**為 `.adx` 檔。舉個例子，`24. PRiSM.zip`要重新命名成`24. PRiSM.adx`，單個譜面也是這樣操作。</p>
     </Step>
 	<Step>
     將 .adx 檔案移至 `AstroDX` 資料夾
-    	<p className="text-sm opacity-50">注意：不是`levels` 資料夾！</p>
+    	<p className="text-sm opacity-50">注意：不是 `levels` 資料夾！</p>
     </Step>
     <Step>
 
@@ -136,7 +135,7 @@ title="**從 ADX 檔安裝歌曲**">
 </Step>
 </Steps>
 
-If you want to change the collection details, like say add a new single chart into a collection, it becomes a bit more complicated.
+如果你想要變動歌曲系列詳細內容，例如說添加一個新的譜面，這可能會有一點點複雜。
 
 <Callout title="接下來是客製化歌曲系列的教學">
   若您沒有想要客製化歌曲系列，可以直接**跳過此段文章**，或甚至直接關閉此維基（因為譜面已安裝完成）
@@ -170,9 +169,9 @@ If you want to change the collection details, like say add a new single chart in
     href="https://localsend.org/"
   ></Card>
 </Cards>
-Make sure that both devices are on the same WiFi network.
+請確保兩個裝置都連接上了相同的WiFi。
 
-Keep the LocalSend app open on your mobile device. On your PC:
+請保持 LocalSend App 在你的行動端開啟。在你的電腦上：
 
 <Steps>
   <Step> 開啟「傳送」標籤頁</Step>
@@ -235,6 +234,8 @@ Keep the LocalSend app open on your mobile device. On your PC:
 
     > 目前我們不建議側載 `.ipa` 檔，加上 `.ipa` 檔十分容易被竄改，然後被有意人士放在 App Store
     > 上。為了防止其發生我們暫時不提供 `.ipa` 檔。
+	
+	簡而言之：因為有壞人，所以我們才沒辦法擁有好的東西。
 
     </Accordion>
 
@@ -262,5 +263,7 @@ Keep the LocalSend app open on your mobile device. On your PC:
 </Accordions>
 
 翻譯者：曾嘉禾（Oliver Tzeng）
+
+潤飾者：NekoTW(Neko no akuma)
 
 <p className="font-serif text-center italic text-xl"> ✨用心血製成的維基💖 </p>
