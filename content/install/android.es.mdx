@@ -1,0 +1,190 @@
+---
+title: Android
+---
+
+![AstroDX Android Installation Banner](content/media/androidguidebanner.webp)
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+import { Step, Steps } from "fumadocs-ui/components/steps";
+
+<Callout title="Translators needed!" type="info">
+  For those who want to translate this article so more people can enjoy this
+  game, please contact @davidscann in the [AstroDX Discord
+  server](https://discord.gg/6fpETgpvjZ) for a copy and as well as clarifications if
+  needed. Thank you!
+</Callout>
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube-nocookie.com/embed/9rr9Ygmyymw?si=tTR3jRaRGG2r56bf"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+></iframe>
+Revisa este
+[video](https://www.youtube-nocookie.com/embed/9rr9Ygmyymw?si=tTR3jRaRGG2r56bf)
+para una guía mas visual para configurar el juego.
+
+# Instalación del App
+
+Es tan simple como 1-2-3.
+
+<Steps>
+<Step>
+### Descargando el APK
+Ve a la pagina oficial de [Publicaciones de AstroDX en GitHub](https://github.com/2394425147/maipaddx/releases) para descargar el APK.
+</Step>
+<Step>
+### Instalando
+
+Para muchos dispositivos de android, te dirá por motivos de seguridad, que [tu navegador] no puede instalar aplicaciones desconocidas.
+
+Sin embargo, solo vete a tus ajustes y activa el permiso para tu navegador. Es así de simple.
+
+</Step>
+
+<Step>
+### Initializando AstroDX
+
+Después de instalar el juego, se sugiere abrir el juego al menos una vez para initializar el juego.
+
+Esto lo hara mas facil para ti al instalar tus canciones después.
+
+</Step>
+</Steps>
+
+**No va a haber canciones por default!** Eso esta ok, obtendremos canciones **en la siguente sección**.
+
+# Instalando Niveles
+
+<Callout>
+  Si esta usando una versión vieja de **AstroDX por ejemplo. 2.0 pre-beta** o una
+  versión anterior, por favor [ve aquí para instrucciones.](/install/legacy-android) Toma en cuenta que soporte
+  no esta garantizada en versiones de legado del juego.
+</Callout>
+
+### ¿Dónde estan los mapas?
+
+Saquemos esto del camino.
+
+<Cards>
+  <Card
+    title="¿Dónde descargar mapas?"
+    href="https://discord.com/channels/892807792996536453/1081048213185900584"
+  >
+    Dale click a este botón para ir al canal #chart-download-where
+  </Card>
+</Cards>
+
+### **Importar por archivo ADX** **(Recomendado, Beta 2 Patch 4 y adelante)**
+
+Esta es la forma primaria para instalar niveles, y es increiblemente facil para empezar.
+
+<Steps>
+
+<Step>
+  ### Renombrar tu archivo zip
+  Cualquier archivo `.zip` de un nivel o multiples se puede **renombrar** a un archivo `.adx`.
+</Step>
+
+<Step>
+  ### Abrir con... > AstroDX
+  En dispositivos compatibles, toca el archivo en cualquier administrador de archivos, y selecciona `Abrir con… > AstroDX`
+</Step>
+
+<Step>
+  ### Ganancia
+  AstroDX automaticamente instalara niveles por ti [dependiendo en lo que contenga el archivo](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74).
+</Step>
+
+</Steps>
+
+<Callout title="En algunos dispositivos, (por ejemplo Xiaomi o algunos dispositivos Samsung), tu administrador de archivos talvez no ofrezca la opción de abrir con AstroDX." type="warn">
+
+Intenta una de estas opciones:
+[**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) /
+[**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files)
+
+Para estos administradores de archivos, si no ves la gestion de `Abrir con...`, lo podrá encontrar usando la **función de Compartir** en su lugar.
+</Callout>
+
+Renombra cualquier archivo `.adx` de regreso a `.zip` para extraerlo como usual.
+
+<Callout title="Limitación de Android: archivos .adx no pueden ser mayores de 2GB">
+
+Usted encontrará errores al intentar instalar archivos .adx mayores de 2GB en tamaño. <br />Esto es un limite duro de Android, y nosotros **no podemos arreglar esto.**<br />
+Nosotros **planeamos en dirigir este problema en el futuro**.
+</Callout>
+
+### Importar manualmente
+
+Instalar niveles como versiones anteriores aun esta soportado.
+
+Para instalar colecciones, tendrás que crear un archivo manifiesto. Aprende mas sobre eso aquí: [en desarollo]
+
+## Actualizar de versiones anteriores
+
+AstroDX automaticamente transfiere tus niveles, colecciones y puntajes a la version nueva.
+
+Si eso falla, un archivo de reserva se crea en la carpeta raiz de AstroDX, y podrá crear un hilo en el foro [#help](https://discord.com/channels/892807792996536453/1017394299933044847).
+
+# PF (Preguntas Frequentes)
+
+<Accordions>
+	<Accordion title="He puesto los archivos .rar/.zip dentro de `/levels`, pero aun no sirve!">
+
+Esa es la forma antigua de hacer cosas. Técnicamente servirá para niveles solitarios, pero colecciones se hacen de una manera distinta. Podría decirse, mejor.
+
+    Si estas usando la version 2.0 Beta 2 Patch 4 o después, estarías mejor usando [el metodo de archivo .adx](#installing-levels).
+    </Accordion>
+
+    <Accordion title="¿Hay una forma de desactivar Notificaciones? Lo quedo deslizando.">
+
+    Afortunadamente para ti, hay un modo tipo-Acceso Guiado en Android.
+
+    Se llama Fijar aplicación, y la forma de activación depende en que dispotivo usted utiliza.
+
+    Excepto si usas Xiaomi. Si tu lo usas, estas fuera de suerte. perdón.
+    </Accordion>
+
+<Accordion title="He puesto el archivo mv.mp4 (o bg.mp4) en la carpeta, pero no se reproduce!">
+
+    AstroDX solo detecta `pv.mp4` para archivos de video. `mv.mp4` es lo que se necesita para correr el video en [Majdata](https://rentry.org/maiguide).
+    </Accordion>
+
+<Accordion title="¿Hay soporte para tarjetas SD?">
+
+    Desafortunadamente, actualmente no. Es sorprendente que difiíil es implementar soporte para tarjetas SD. 
+
+    Alternativamente, usted puede *intentar* buscar una forma de hacer symlinks servir dentro de Android (ya que basicamente es Linux). Yo no he encontrado una forma de hacerlo servir. Buena suerte!
+    </Accordion>
+
+<Accordion title="¿Porqué el juego no esta en la Google Play Store?">
+
+    Aun no calificamos para implementación en la Play Store, y queremos ser un juego enteramente completo antes de que lo hagamos.
+
+    Y, nosotros talvez estaremos en otros mercados de aplicaciones en cambio de la Play Store por las tarifas exorbitantes. No es gratis.
+    </Accordion>
+
+<Accordion title="[2.0 Beta] ¿Porqué estamos cambiando la acomodación del almacenamiento?">
+
+    Como usted talvez puede conocer, en versiones anteriores de AstroDX, niveles se pueden poner entre en el nivel-alto (Directamente dentro de la carpeta `levels`), o usted puede poner uno o mas niveles dentro de otra carpeta nombrada para hacer una **colecciones**. Esto lo hizo muy facil para customizar colecciones directamente en el sistema de archivos, pero tambien introdujo unos problemas interesantes.
+
+    **No puedes utilizar el mismo nivel en multiples colecciones.** Debido a que colecciones existen como carpetas, es muy difícil averiguar una manera para poner el mismo nivel dentro de muchas carpetas a la vez. Aun que sea posible, controlar accesos directos y links aseguradamente será dificil al borrar un nivel o mover un nivel a otro lugar.
+
+    **Multiples niveles pueden tener el mismo nombre.** Aunque usamos carpetas para agrupar niveles, los niveles se expanden a una lista singular en el juego. Esto lo hace posible que dos o mas carpetas del mismo nombre existan, creando una colision de llaves en el diccionario de niveles del juego. Y cuando estas agregando niveles a un mar de carpetas, es difícil identificar cuando una carpeta del mismo nombre ya existe.
+
+    Por usar un metodo alternativo de representar las colecciones, aunque lo hemos hecho un poco mas complejo editar datos de colecciones (que estamos trabajando un administrador de colecciones dentro del juego para resolver), podemos resolver los problemas mencionados anteriormente.
+
+</Accordion>
+</Accordions>
+
+### **Por dios, yo no quiero leer nada de eso.**
+
+Quejate, hiervete, y menciona a @davidscann en el server de Discord de AstroDX.
+**Solo asegúrate de decirme que tu has decidido no leer la guía.**
+
+<p className="font-serif text-center italic text-xl"> ✨ hecho con amor 💖 </p>

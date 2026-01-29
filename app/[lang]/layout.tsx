@@ -45,6 +45,10 @@ export default async function Layout({
 							name: "Japanese",
 							locale: "jp",
 						},
+						{
+							name: "Español",
+							locale: "es",
+						},
 					]}
 				>
 					<RootProvider>
