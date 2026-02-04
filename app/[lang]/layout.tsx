@@ -3,6 +3,7 @@ import "./global.css";
 import { Inter } from "next/font/google";
 import { defineI18nUI } from "fumadocs-ui/i18n";
 import { i18n } from "@/lib/i18n";
+import SearchDialog from "@/components/search";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -52,7 +53,9 @@ export default async function RootLayout({
   return (
     <html lang={lang} className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <RootProvider i18n={provider(lang)}>{children}</RootProvider>
+        <RootProvider i18n={provider(lang)} search={{ SearchDialog }}>
+          {children}
+        </RootProvider>
       </body>
     </html>
   );

@@ -63,6 +63,7 @@ export async function generateMetadata(
   return {
     title: page.data.title,
     description: page.data.description,
+    metadataBase: new URL("https://wiki.astrodx.com/"),
     openGraph: {
       images: getPageImage(page).url,
     },
