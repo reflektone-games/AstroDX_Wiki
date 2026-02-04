@@ -2,14 +2,28 @@
 title: 安卓
 ---
 
-![AstroDX Android Installation Banner](content/media/androidguidebanner.webp)
-
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 import { Step, Steps } from "fumadocs-ui/components/steps";
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+import { PageCard } from '@/components/PageCard.tsx'
 
-<Callout title="我们需要翻译者！" type="info">
-  如果你想翻译这篇文章以帮助更多人享受这个游戏，请在 [AstroDX Discord
-  服务器](https://discord.gg/6fpETgpvjZ)中联系 @davidscann 获取原文副本以及必要的说明。感谢感谢！
+![AstroDX Android Installation Banner](media/androidguidebanner.webp)
+
+### 导览
+
+这篇教程将引导你下载并游玩自制关卡。在教程完成后，你应能够在AstroDX中导入关卡，AstroDX能够在关卡浏览界面中显示你导入的关卡。
+
+<Callout type="info">
+
+    只需要手机就可以完成这个教程，无需电脑~
+
+</Callout>
+
+<Callout type="warning">
+
+    这个教程针对AstroDX **v2.0.0 Beta 2 Patch 4**或以上版本。
+    如果你还在较早版本的话，我们推荐你进行更新。
+
 </Callout>
 
 <iframe
@@ -22,172 +36,97 @@ import { Step, Steps } from "fumadocs-ui/components/steps";
   referrerPolicy="strict-origin-when-cross-origin"
   allowFullScreen
 ></iframe>
-如果文档不是你的风格的话，在这里可以查看
-[视频教程](https://www.youtube-nocookie.com/embed/9rr9Ygmyymw?si=tTR3jRaRGG2r56bf)
+这里可以查看[视频教程](https://www.youtube-nocookie.com/embed/9rr9Ygmyymw?si=tTR3jRaRGG2r56bf)
 
-# 安装 APK
+## 预先工作
 
-<Steps>
-<Step>
-### 下载安装包
+开始这篇教程之前，你应该准备好：
 
-通过浏览器导航到 [AstroDX 的 GitHub 发布页面](https://github.com/2394425147/maipaddx/releases)。
+- 一个装好了且**至少打开一次AstroDX**的安卓设备。你可以在[你好，AstroDX!](/)中找到下载AstroDX的方法。
+- 下载到你的设备上的一个小于2GB的自制关卡或关卡集，至少包含一个track文件和一个maidata文件。你可以通过我们的[Discord服务器](https://invite.astrodx.com/)下载一些自制谱。
 
-找到最新的版本（编写时最新版为 v2.0.0.beta.2.patch.c），并展开 Assets 栏目，单击 .apk 文件即可下载。
+## 第一步 – 压缩文件
 
-</Step>
-<Step>
-### 安装
+如果你的自制谱不是一个`.zip`文件的话，你需要把它压缩成一个`.zip`文件。
+AstroDX只能安装`.zip`格式的文件。
 
-在安装 AstroDX（或任意第三方软件）时，多数安卓设备会提示因安全问题，无法安装未识别的应用。
+如果你的自制谱叫"level"：
 
-这一问题可以通过 `⚙️手机设置` 中给浏览器允许权限解决。
+<Files>
+  <Folder name="level" defaultOpen>
+    <File name="maidata.txt" />
+    <File name="track.ogg" />
+    <File name="bg.jpg" />
+  </Folder>
+</Files>
 
-</Step>
+那么你应该把它像这样压缩：
 
-<Step>
-### 初始化 AstroDX
+<Files>
+    <Folder name="level.zip (文件取什么名都可以)" defaultOpen>
+        <Folder name="level" defaultOpen>
+          <File name="maidata.txt" />
+          <File name="track.ogg" />
+          <File name="bg.jpg" />
+        </Folder>
+    </Folder>
+</Files>
 
-在安装 AstroDX 之后，请在导入曲目前先启动游戏一次，让游戏正常初始化，完成文件系统的配置。
-
-</Step>
-</Steps>
-
-**第一次打开游戏没有任何内置曲目哦！** 我们会在下面的部分介绍获取曲目的办法。
-
-# 安装曲目
-
-<Callout>
-  如果你在用 2.0.0.beta.2.patch.c 以前的版本，如 pre-beta 或者更早，请查看我们的
-  [旧版教程](legacy-android)
+<Callout type="idea">
+    注意`level.zip`**里面**包含了整个关卡文件夹。
 </Callout>
 
-### 谱面在哪里？
+你现在应该有了一个AstroDX能用的`.zip`文件。为了能让AstroDX能打开这个文件，你需要重命名它。我们会在下一步进行这个操作。
+
+## 第二步 – 重命名文件
+
+AstroDX能够直接打开重命名为`.adx`的`.zip`文件。
+
+如果你在手机操作，请你打开文件浏览器，长按你的`.zip`文件，找到**重命名**的选项，以更改文件名：
+
+<Files>
+    <File name="level.zip (原名)" />
+    <File name="level.adx (更改后)" />
+</Files>
+
+<Callout type="info">
+    如果你改不了文件扩展名，你也可以把文件改名成`（名字).adx.zip`。
+</Callout>
+
+你的文件到这里就准备完毕了。在下一步，我们会把文件加入AstroDX。
+
+## 第三步 – 打开文件
+
+在手机上，按下`.adx`文件，一个菜单会打开并提示你选择一个打开的程序。请选择**AstroDX**。
+
+如果AstroDX不在菜单中，请长按`.adx`文件并选择分享文件。在分享菜单中，请选择**AstroDX**。
+
+AstroDX会在此启动并显示进度条。当进度条完成时，请你进入关卡选择。
+
+你的自制谱应该会出现在曲目列表中。导入成功了，好耶！
+
+<Callout title="文件管理器没有打开或者分享的选项" type="info">
+
+    你可以尝试下载其他文件管理器：
+
+    - [MT管理器](https://mt2.cn/)
+    - [**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
+    - [**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files)
+
+</Callout>
+
+## 总结
+
+在安装了关卡后，你也许对AstroDX如何检查并判别不同的`.adx`文件的布局感兴趣。比如说，你知道你可以把多个关卡放进一个`.adx`文件吗？
 
 <Cards>
-  <Card
-    title="谱面在哪里？"
-    href="https://discord.com/channels/892807792996536453/1081048213185900584"
-  >
-    点击此链接前往 Discord 服务器的 #chart-download-where 频道
-  </Card>
+    <PageCard slug="install-logic" />
 </Cards>
 
-### **通过 ADX 文件导入**（推荐，支持 Beta 2 Patch 4 及更新版本）
+<Callout type="info" title="叽里呱啦说啥呢，我不想读啊">
 
-这是安装曲目的主要方式，上手非常简单。
-
-<Steps>
-
-<Step>
-  ### 重命名你的 zip 文件
-  任何包含一个或多个曲目的 `.zip` 文件都可以**重命名**为 `.adx` 文件。
-</Step>
-
-<Step>
-  ### 打开方式... > AstroDX
-  在支持的设备上，在任何文件管理器中点击该文件，然后选择 `打开方式... > AstroDX`
-</Step>
-
-<Step>
-  ### 完成
-  AstroDX 会根据[归档文件包含的内容](https://astrodx.notion.site/ADX-Archive-Details-a8346048819a40b18f0a6c014c19b0b3?pvs=74)
-  自动为你整理谱面。
-</Step>
-
-</Steps>
-
-<Callout title="在某些设备上（例如小米或某些三星设备），你的文件管理器可能不提供用 AstroDX 打开的选项。" type="warn">
-
-请尝试以下选项之一：
-[**ZArchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) /
-[**Android SAF**](https://play.google.com/store/apps/details?id=com.marc.files)
-
-如果这些文件管理器都不提供 `打开方式` 选项，可以用 `分享` 选项。
+    没关系，你来我们 AstroDX 的 Discord 服务器然后 @davidscann 就行了
+    **只要你事先告诉我你决定不读指南哦。**
+    (请用英语沟通，davidscann不会中文！)
 
 </Callout>
-
-将任何 `.adx` 文件重命名回 `.zip` 即可像往常一样解压。
-
-<Callout title="安卓限制：.adx 文件大小不得大于 2GB">
-
-当你尝试安装大于 2GB 的 .adx 归档文件时，将会遇到错误。<br />这是安卓系统的硬性限制，我们**无法修复这个问题**。<br />
-我们**计划在未来解决这个问题**。
-
-</Callout>
-
-### 手动导入
-
-AstroDX 仍然支持像旧版本一样安装曲目。
-
-如果要手动安装合集，你需要创建和编写一个清单文件。在此处了解更多信息：[正在努力编写中...]
-
-## 从旧版本更新
-
-AstroDX 会自动将你的曲目、合集和分数转移到新版本。
-
-如果转移失败，备份文件将保存在 AstroDX 的根文件夹，你可以在 [#help](https://discord.com/channels/892807792996536453/1017394299933044847) 频道中开启一个新话题。
-
-# 常见问题解答
-
-<Accordions>
-    <Accordion title="我已经把 .rar/.zip 文件放入了 `/levels` 文件夹，但还是跑不出曲目！">
-
-那是旧的操作方式。对于单个曲目来说，这种方式理论上仍然有效，但现在对于歌曲分类的处理方式已经不同了。
-
-如果你正在使用 2.0 Beta 2 Patch 4 或更新版本，推荐使用 [.adx 归档方法](#安装曲目)。
-
-</Accordion>
-
-    <Accordion title="有没有办法在玩音游时关闭手机通知？我总是不小心滑到。">
-
-有的兄弟有的，Android 中有类似于引导访问的功能。
-
-把 AstroDX 钉到最上层，如何开启取决于你使用的设备。
-
-...除非你在用小米。如果是，那你就运气不好了。抱歉。
-
-</Accordion>
-
-<Accordion title="我已经把 mv.mp4（或 bg.mp4）文件放入了文件夹，但视频没在播放！">
-
-AstroDX 只检测 `pv.mp4` 作为视频文件。顺带一提，`mv.mp4` 是在 [Majdata](https://rentry.org/maiguide) 中运行视频所需的文件名。
-
-</Accordion>
-
-<Accordion title="是否支持SD卡？">
-
-很遗憾，目前不支持。实现对 SD 卡的支持相当复杂。
-
-或者，你可以*尝试*在 Android 中找到创建软链接的方法（因为它基本上就是 Linux）。我还没找到让它工作的方法。祝你好运！
-
-</Accordion>
-
-<Accordion title="为什么 AstroDX 不在 Google Play 商店上？">
-
-我们目前还不符合在 Play 商店上发布的条件，并且我们希望在此之前先成为一个成熟的游戏。
-
-此外，由于费用高昂，我们可能会选择其他应用市场而非 Play 商店，例如 F-Droid。
-
-</Accordion>
-
-<Accordion title="[2.0 Beta] 为什么我们要改变歌曲存储布局？">
-
-在 AstroDX 的早期版本中，曲目可以放在顶层（直接放在 `levels` 文件夹内），或者你可以将一个或多个曲目放在另一个命名文件夹中以创建**合集**。这让在文件系统中直接自定义合集变得方便，尽管它也引入了不少问题。
-
-**不能在多个合集中使用相同的曲目**。由于合集以文件夹的形式存在，很难找到一种方法将相同的曲目同时放入多个文件夹。即使可行，在删除曲目或将曲目移至其他位置时，管理快捷方式和链接肯定会很困难。
-
-**多个曲目可以有相同的名称**。尽管我们使用文件夹来分组曲目，但在游戏中这些曲目会展开为一个单一列表。这使得可能有两个或更多同名的文件夹，在游戏的曲目字典中造成键冲突。当你将曲目添加到众多文件夹中时，很难识别是否已存在同名的文件夹。
-
-通过使用表示合集的替代方式，尽管我们使编辑合集数据变得稍微复杂了一些（我们正在努力添加游戏内合集管理器来解决这个问题），但我们能够解决上述问题了。
-
-</Accordion>
-</Accordions>
-
-### **呃呃，一点都不想读。**
-
-没关系，在 AstroDX Discord 服务器上 @davidscann。
-**只要你事先告诉我你决定不读指南哦。**
-(请用英语沟通，davidscann不会中文！)
-
-<p className="font-serif text-center italic text-xl"> ✨ 用爱制作 💖 </p>

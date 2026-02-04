@@ -1,34 +1,32 @@
 {
-  "name": "adx-wiki",
+  "name": "astrodx.wiki",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "pages:build": "npx @cloudflare/next-on-pages",
-    "preview": "npm run pages:build && wrangler pages dev",
-    "deploy": "npm run pages:build && wrangler pages deploy",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
+    "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
-    "fumadocs-core": "14.6.0",
-    "fumadocs-mdx": "11.1.2",
-    "fumadocs-ui": "14.6.0",
-    "next": "^15.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "fumadocs-core": "16.4.10",
+    "fumadocs-mdx": "14.2.6",
+    "fumadocs-ui": "16.4.10",
+    "lucide-react": "^0.563.0",
+    "next": "16.1.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.7",
+    "@tailwindcss/postcss": "^4.1.18",
     "@types/mdx": "^2.0.13",
-    "@types/node": "22.10.1",
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.2",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.16",
-    "typescript": "^5.7.2"
-  },
-  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
+    "@types/node": "^25.0.10",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  }
 }

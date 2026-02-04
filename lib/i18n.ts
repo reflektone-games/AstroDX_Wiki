@@ -1,6 +1,6 @@
-import type { I18nConfig } from "fumadocs-core/i18n";
+import { defineI18n } from "fumadocs-core/i18n";
 
-export const i18n: I18nConfig = {
-	defaultLanguage: "en",
-	languages: ["en", "cn", "tw", "vn", "jp", "es"],
-};
+export const i18n = defineI18n({
+  defaultLanguage: "en",
+  languages: ["en", "cn", "tw", "vn", "jp", "es"],
+});
