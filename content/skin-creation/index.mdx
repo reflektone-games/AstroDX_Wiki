@@ -1,0 +1,142 @@
+---
+title: Creating Skins
+---
+import { PageCard } from '@/components/PageCard.tsx'
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+
+## Introduction
+
+Skins let you customize the appearance of notes.
+In this guide, you will learn how to create a custom skin.
+By the end, you'll understand the concepts of skin creation, and you'll be able to make a skin yourself.
+
+<Callout type="warning">
+
+    This guide is written for **AstroDX v2.1.0 and above**.
+    Skin customization is not available in older versions of the game.
+
+</Callout>
+
+## Prerequisites
+
+- A computer with an operating system capable of creating folders and editing files.
+- A code editor like [Zed](https://zed.dev/) or [Visual Studio Code](https://code.visualstudio.com/).
+- Image files to be used as note textures. You can make some using [paint.net](https://www.getpaint.net/), [GIMP](https://gimp.org), [Canva](https://www.canva.com/), [Affinity](https://www.affinity.studio/), or any other image editing software.
+- A little knowledge about how JSON works. You can learn more through a video like this: [Learn JSON in 10 Minutes](https://www.youtube.com/watch?v=iiADhChRriM)
+
+
+## Step 1 - Defining a Skin
+
+<Callout type="info">
+
+    A skin in AstroDX is a folder containing a **manifest file** and **image files**.
+    The game looks for the manifest file to determine the skin name and designer name, as well as texture configurations for each image the game uses.
+
+</Callout>
+
+Create a folder on your computer. This folder will contain files for your custom skin, and we'll eventually package this folder to be used by AstroDX.
+
+Inside this folder, create a file and name it `skin.json`. This file contains information to specify how the skin should be loaded.
+
+<Callout type="info">
+
+    You can create a json file by renaming a text file. Turn on **show extensions** in your file manager to change `.txt` to `.json`.
+    You can also use your code editor to create a file called `skin.json` directly.
+
+</Callout>
+
+Open `skin.json` and write down the following text:
+
+```json title="skin.json"
+{
+    "name": "My First Skin",
+    "designer": "Your name here"
+}
+```
+
+This file lets the game describe the skin as `My First Skin`, and the designer as `Your name here`.
+
+## Step 2 - Adding Textures
+
+AstroDX allows a number of game elements to have custom skins. View the skin manifest documentation for everything you can customize:
+
+<Cards>
+    <PageCard slug="skin-creation/manifest" />
+</Cards>
+
+As an example, let's customize the texture of a normal tap note. Find the tap note section in the manifest documentation:
+
+| Property | Type | Default Path |
+|----------|------|---------|
+| `tap` | `SpriteDefinition` | `"tap.png"` |
+
+The default path says `"tap.png"`. This means that the game looks for a file named `tap.png` and replaces the tap note texture in-game with the file.
+
+Put an image file named `tap.png` inside the skin folder. Your folder should now look like this:
+
+<Files>
+  <Folder name="my-skin" defaultOpen>
+    <File name="skin.json" />
+    <File name="tap.png" />
+  </Folder>
+</Files>
+
+## Step 3 – Compressing the Folder
+
+This is identical to installing levels. AstroDX is able to identify that you're installing a skin instead of a level.
+
+Compress the folder like this:
+
+<Files>
+    <Folder name="my-skin.zip (The name of the file doesn't matter)" defaultOpen>
+      <Folder name="my-skin" defaultOpen>
+        <File name="skin.json" />
+        <File name="tap.png" />
+      </Folder>
+    </Folder>
+</Files>
+
+<Callout type="idea">
+    Notice that `my-skin.zip` **contains** the skin folder.
+</Callout>
+
+Then, rename the `.zip` file into an `.adx` file to let AstroDX recognize the file.
+
+If you're on a mobile device, in your file browser, long press on the `.zip` file, and find the **Rename** option to rename the file:
+
+<Files>
+    <File name="my-skin.zip (Old)" />
+    <File name="my-skin.adx (Rename to this)" />
+</Files>
+
+<Callout type="info">
+    If you can't rename the file extension, you can also rename the file to `(name).adx.zip`.
+</Callout>
+
+Your file is fully prepared. In the next step, we'll install the file into AstroDX.
+
+## Step 3 – Opening the `.adx` File
+
+On your mobile device, tap on the `.adx` file, a menu should pop up prompting you what app you want to open the file with. Select **AstroDX**.
+
+If AstroDX isn't an option, press and hold on the `.adx` file to share the file. In the share menu, select **AstroDX**.
+
+AstroDX should now open up and show you a progress bar.
+Once the progress bar finishes, you can find the skin in Settings -> Theme.
+
+<Callout title="My file manager doesn't have 'Open with' or 'Share'" type="info">
+
+    Try other file managers:
+
+    - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
+    - [Android SAF](https://play.google.com/store/apps/details?id=com.marc.files)
+
+</Callout>
+
+## Conclusion
+
+You've successfully completed the skin creation guide! You can learn more about the manifest in the skin manifest documentation.
+
+<Cards>
+    <PageCard slug="skin-creation/manifest" />
+</Cards>
