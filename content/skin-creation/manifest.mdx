@@ -1,0 +1,184 @@
+---
+title: Skin Manifest
+---
+
+## Top-Level Properties
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `name` | `string` | N/A | The display name of the skin. This is shown in the skin selection menu. |
+| `designer` | `string` | N/A | The name of the skin's designer. |
+| `ring` | `SpriteDefinition` | `{ "path": "ring.png", "ppu": 115 }` | The ring sprite that covers the play area. |
+
+
+<Callout type="info">
+
+    If you don't declare the properties in your JSON file, they will use the default values instead.
+    Invalid paths will be ignored and don't show up as options in-game.
+
+</Callout>
+
+---
+
+## Colors
+
+These properties define the tint colors applied to guide marks behind the notes. Colors are specified as hexadecimal strings (e.g., `"#FF5733"` or `"#FF5733FF"` for RGBA).
+
+| Property | Type | Default |
+|----------|------|---------|
+| `tap_color` | `Color` | N/A |
+| `each_color` | `Color` | N/A |
+| `break_color` | `Color` | N/A |
+| `mine_color` | `Color` | N/A |
+| `slide_color` | `Color` | N/A |
+
+---
+
+## Tap Note Sprites
+
+Sprites for tap notes and their variants.
+
+| Property | Type | Default Path |
+|----------|------|---------|
+| `tap` | `SpriteDefinition` | `"tap.png"` |
+| `tap_each` | `SpriteDefinition` | `"tap_each.png"` |
+| `tap_break` | `SpriteDefinition` | `"tap_break.png"` |
+| `tap_mine` | `SpriteDefinition` | `"tap_mine.png"` |
+| `tap_ex` | `SpriteDefinition` | `"tap_ex.png"` |
+
+---
+
+## Star Note Sprites
+
+Sprites for star-shaped notes and their variants.
+
+| Property | Type | Default Path |
+|----------|------|---------|
+| `star` | `SpriteDefinition` | `"star.png"` |
+| `star_alt` | `SpriteDefinition` | `"star_alt.png"` |
+| `star_each` | `SpriteDefinition` | `"star_each.png"` |
+| `star_break` | `SpriteDefinition` | `"star_break.png"` |
+| `star_mine` | `SpriteDefinition` | `"star_mine.png"` |
+| `star_ex` | `SpriteDefinition` | `"star_ex.png"` |
+
+---
+
+## Hold Note Sprites
+
+Sprites for hold notes and their variants.
+
+| Property | Type | Default Path |
+|----------|------|---------|
+| `hold` | `SpriteDefinition` | `"hold.png"` |
+| `hold_each` | `SpriteDefinition` | `"hold_each.png"` |
+| `hold_break` | `SpriteDefinition` | `"hold_break.png"` |
+| `hold_mine` | `SpriteDefinition` | `"hold_mine.png"` |
+| `hold_slide` | `SpriteDefinition` | `"hold_slide.png"` |
+| `hold_ex` | `SpriteDefinition` | `"hold_ex.png"` |
+| `hold_active` | `SpriteDefinition` | `"hold_active.png"` |
+| `hold_each_active` | `SpriteDefinition` | `"hold_each_active.png"` |
+| `hold_break_active` | `SpriteDefinition` | `"hold_break_active.png"` |
+| `hold_mine_active` | `SpriteDefinition` | `"hold_mine_active.png"` |
+| `hold_slide_active` | `SpriteDefinition` | `"hold_slide_active.png"` |
+
+---
+
+## Touch Note Sprites
+
+Sprites for touch notes.
+
+| Property | Type | Default Path |
+|----------|------|---------|
+| `touch` | `SpriteDefinition` | `"touch.png"` |
+| `touch_each` | `SpriteDefinition` | `"touch_each.png"` |
+| `touch_break` | `SpriteDefinition` | `"touch_break.png"` |
+| `touch_mine` | `SpriteDefinition` | `"touch_mine.png"` |
+| `touch_hit` | `SpriteDefinition` | `"touch_hit.png"` |
+| `touch_stack` | `SpriteDefinition` | `"touch_stack.png"` |
+| `touch_star` | `SpriteDefinition` | `"touch_star.png"` |
+| `touch_star_alt` | `SpriteDefinition` | `"touch_star_alt.png"` |
+| `touch_star_each` | `SpriteDefinition` | `"touch_star_each.png"` |
+| `touch_star_break` | `SpriteDefinition` | `"touch_star_break.png"` |
+| `touch_star_mine` | `SpriteDefinition` | `"touch_star_mine.png"` |
+| `touch_star_hit` | `SpriteDefinition` | `"touch_star_hit.png"` |
+
+---
+
+## Touch Hold Sprites
+
+Sprites for touch hold notes.
+
+| Property | Type | Default Path |
+|----------|------|---------|
+| `touch_hold_tr` | `SpriteDefinition` | `"touch_hold_tr.png"` |
+| `touch_hold_br` | `SpriteDefinition` | `"touch_hold_br.png"` |
+| `touch_hold_bl` | `SpriteDefinition` | `"touch_hold_bl.png"` |
+| `touch_hold_tl` | `SpriteDefinition` | `"touch_hold_tl.png"` |
+| `touch_hold_break` | `SpriteDefinition` | `"touch_hold_break.png"` |
+| `touch_hold_mine` | `SpriteDefinition` | `"touch_hold_mine.png"` |
+| `touch_hold_bg` | `SpriteDefinition` | `"touch_hold_bg.png"` |
+| `touch_hold_break_bg` | `SpriteDefinition` | `"touch_hold_break_bg.png"` |
+| `touch_hold_mine_bg` | `SpriteDefinition` | `"touch_hold_mine_bg.png"` |
+
+---
+
+## Touch Dot Sprites
+
+Sprites for the dot sprites at the center of touch notes.
+
+| Property | Type | Default Path |
+|----------|------|---------|
+| `touch_dot` | `SpriteDefinition` | `"touch_dot.png"` |
+| `touch_dot_each` | `SpriteDefinition` | `"touch_dot_each.png"` |
+| `touch_dot_break` | `SpriteDefinition` | `"touch_dot_break.png"` |
+| `touch_dot_mine` | `SpriteDefinition` | `"touch_dot_mine.png"` |
+
+---
+
+## Slide Arrow Sprites
+
+Sprites for the arrows shown along slide paths.
+
+| Property | Type | Default Path |
+|----------|------|---------|
+| `arrow` | `SpriteDefinition` | `"arrow.png"` |
+| `arrow_each` | `SpriteDefinition` | `"arrow_each.png"` |
+| `arrow_break` | `SpriteDefinition` | `"arrow_break.png"` |
+
+---
+
+## Fan Slide Sprites
+
+Sprites for fan-shaped slides.
+
+| Property | Type | Default |
+|----------|------|---------|
+| `fan` | `SpriteDefinition` | `{ "path": "fan.png", "ppu": 58 }` |
+| `fan_each` | `SpriteDefinition` | `{ "path": "fan_each.png", "ppu": 58 }` |
+| `fan_break` | `SpriteDefinition` | `{ "path": "fan_break.png", "ppu": 58 }` |
+| `fan_erosion` | `SpriteDefinition` | `{ "path": "fan_erosion.png", "ppu": 58 }` |
+
+---
+
+## SpriteDefinition Type
+
+Each sprite property uses the `SpriteDefinition` type with the following fields:
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `path` | `string` | N/A | The relative path to the image file within the skin folder. |
+| `ppu` | `float` | `200` | Pixels per unit in-game. Lower values make the sprite appear larger. A value of 100 means 100 pixels equals 1 unit. |
+| `pivot_x` | `float` | `0` | The horizontal pivot point of the sprite, normalized from 0 (left) to 1 (right). A value of 0.5 centers the pivot horizontally. |
+| `pivot_y` | `float` | `0` | The vertical pivot point of the sprite, normalized from 0 (bottom) to 1 (top). A value of 0.5 centers the pivot vertically. |
+| `top` | `float` | `0` | The top slice border for a 9-slice sprite, measured from the top edge in pixels. |
+| `bottom` | `float` | `0` | The bottom slice border for a 9-slice sprite, measured from the bottom edge in pixels. |
+
+<Callout type="info">
+
+    Supported image formats are those recognized by Unity's `Texture2D.LoadImage` method, which includes PNG, JPEG, and other common formats.
+
+</Callout>
+
+---
+
+## Example
