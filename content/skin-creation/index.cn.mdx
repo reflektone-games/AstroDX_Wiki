@@ -1,0 +1,144 @@
+---
+title: 创建皮肤
+---
+import { PageCard } from '@/components/PageCard.tsx'
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+
+## 简介
+
+皮肤让你能够自定义音符的外观。
+在本指南中，你将学习如何创建自定义皮肤。
+完成后，你将理解皮肤创建的概念，并能自己制作皮肤。
+
+<Callout type="warning">
+
+    本指南针对 **AstroDX v2.1.0 及以上版本** 编写。
+    旧版本游戏不支持皮肤自定义。
+
+</Callout>
+
+## 事前准备
+
+- 一台能够创建文件夹和编辑文件的电脑。
+- 一个代码编辑器，如 [Zed](https://zed.dev/) 或 [Visual Studio Code](https://code.visualstudio.com/)。
+- 用作音符贴图的图像文件。你可以使用 [paint.net](https://www.getpaint.net/)、[GIMP](https://gimp.org)、[Canva](https://www.canva.com/)、[Affinity](https://www.affinity.studio/) 或其他图像编辑软件制作一些。
+- JSON 工作原理的一些相关知识。你可以通过类似这样的视频学习更多：[在10分钟内学会 JSON](https://www.youtube.com/watch?v=iiADhChRriM)
+
+
+## 第1步 - 定义皮肤
+
+<Callout type="info">
+
+    AstroDX 中的皮肤是一个包含 **清单文件** 和 **图像文件** 的文件夹。
+    游戏通过查找清单文件来确定皮肤名称和设计师名称，以及游戏使用的每个图像的贴图配置。
+
+</Callout>
+
+在电脑上新建一个文件夹。这个文件夹将包含你自定义皮肤的文件，我们最终会把这个文件夹打包供 AstroDX 使用。
+
+在这个文件夹内，新建一个文件并将其命名为 `skin.json` 。这个文件将会包含皮肤如何加载的信息。
+
+<Callout type="info">
+
+    你可以通过重命名文本文件来创建 json 文件。在文件管理器中开启 **显示扩展名** ，将 `.txt` 改为 `.json`。
+    你也可以直接使用代码编辑器创建一个名为 `skin.json` 的文件。
+
+</Callout>
+
+打开 `skin.json` 并写入以下文本：
+
+```json title="skin.json"
+{
+    "name": "我的第一个皮肤",
+    "designer": "你的名字"
+}
+```
+
+这样文件就会使游戏将这个皮肤解析为 `我的第一个皮肤` ，设计者为 `你的名字`。
+
+## 第二步 - 添加贴图
+
+AstroDX 允许多种游戏元素拥有自定义皮肤。你可以通过查看下面的 **皮肤参数列表** 文档来确认所有可自定义的元素：
+
+<Cards>
+    <PageCard slug="skin-creation/manifest" />
+</Cards>
+
+As an example, let's customize the texture of a normal tap note. Find the tap note section in the manifest documentation:
+作为示例，让我们来自定义一个普通的tap音符。在清单文档中找到 tap 音符部分：
+
+| 属性 | 类型 | 默认路径 |
+|----------|------|---------|
+| `tap` | `SpriteDefinition` | `"tap.png"` |
+
+默认路径写着 `"tap.png"`。这意味着游戏会查找名为 `tap.png` 的文件，并用该文件替换游戏中的 tap 音符贴图。
+
+将一个名为 `tap.png` 的图像文件放入皮肤文件夹中。你的文件夹现在应该如下所示：
+
+<Files>
+  <Folder name="我的皮肤" defaultOpen>
+    <File name="skin.json" />
+    <File name="tap.png" />
+  </Folder>
+</Files>
+
+## 第三步 - 压缩文件夹
+
+这与安装谱面的方式完全相同。AstroDX 可以识别你在安装皮肤而不是谱面。
+
+将你的文件夹压缩成如下所示结构：
+
+<Files>
+    <Folder name="我的皮肤.zip （压缩包的文件名无关紧要）" defaultOpen>
+      <Folder name="我的皮肤" defaultOpen>
+        <File name="skin.json" />
+        <File name="tap.png" />
+      </Folder>
+    </Folder>
+</Files>
+
+<Callout type="idea">
+    注意：`我的皮肤.zip` 文件 **包含** 皮肤文件夹。
+</Callout>
+
+接着，将你的 `.zip` 文件重命名为 `.adx` 文件，以便 AstroDX 识别它。
+
+If you're on a mobile device, in your file browser, long press on the `.zip` file, and find the **Rename** option to rename the file:
+如果你处于移动设备，请在你的文件资源管理器里，长按 `.zip` 文件，并找到 **重命名** 选项来重命名文件：
+
+<Files>
+    <File name="我的皮肤.zip (原先的文件名)" />
+    <File name="我的皮肤.adx (重命名为这个文件名)" />
+</Files>
+
+<Callout type="info">
+    如果你不能重命名文件后缀名，你可以重命名文件为 `(皮肤名).adx.zip`。
+</Callout>
+
+现在你的皮肤文件已经完全准备好了。下一步，我们将来把你的皮肤安装到 AstroDX。
+
+## 第四步 - 启动 `.adx` 文件
+
+在你的移动设备上，点击 `.adx` 文件，此时将会弹出一个菜单，提示你选择应该打开的应用程序。在弹出的菜单中选择 **AstroDX**。
+
+如果 AstroDX 不是弹出菜单中的选项，请长按 `.adx` 文件并分享文件。在分享菜单中选择 **AstroDX**。
+
+此时 AstroDX 应会打开并展示进度条。
+进度条完成后，你可以在 设置 -> 主题 中找到该皮肤。
+
+<Callout title="我的文件管理器没有“打开方式”或“分享”" type="info">
+
+    尝试使用其他文件管理器：
+
+    - [ZArchiver](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver)
+    - [Android SAF](https://play.google.com/store/apps/details?id=com.marc.files)
+
+</Callout>
+
+## 结语
+
+你已经成功完成了皮肤创建指南！你可以在皮肤参数列表文档中了解更多关于清单的信息。
+
+<Cards>
+    <PageCard slug="skin-creation/manifest" />
+</Cards>

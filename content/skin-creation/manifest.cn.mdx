@@ -1,0 +1,184 @@
+---
+title: 皮肤参数列表
+---
+
+## 顶层属性
+
+| 属性 | 类型 | 默认值 | 描述 |
+|----------|------|---------|-------------|
+| `name` | `string` | 无 | 皮肤的名称。此名称会显示在皮肤选择菜单中。 |
+| `designer` | `string` | 无 | 皮肤设计者的名字。 |
+| `ring` | `SpriteDefinition` | `{ "path": "ring.png", "ppu": 115 }` | 覆盖游玩区域的环状图像。 |
+
+
+<Callout 类型="info">
+
+    如果你未在 JSON 文件中声明这些属性，它们将使用默认值。
+    无效路径将被忽略，不会在游戏中作为选项显示。
+
+</Callout>
+
+---
+
+## 颜色
+
+这些属性定义了音符后方引导标记的着色颜色。颜色以十六进制形式表示（例如 `"#FF5733"` 或带透明度的 `"#FF5733FF"`）。
+
+| 属性 | 类型 | 默认值 |
+|----------|------|---------|
+| `tap_color` | `Color` | 无 |
+| `each_color` | `Color` | 无 |
+| `break_color` | `Color` | 无 |
+| `mine_color` | `Color` | 无 |
+| `slide_color` | `Color` | 无 |
+
+---
+
+## Tap音符图像
+
+Tap 音符及其变体的图像。
+
+| 属性 | 类型 | 默认路径 |
+|----------|------|---------|
+| `tap` | `SpriteDefinition` | `"tap.png"` |
+| `tap_each` | `SpriteDefinition` | `"tap_each.png"` |
+| `tap_break` | `SpriteDefinition` | `"tap_break.png"` |
+| `tap_mine` | `SpriteDefinition` | `"tap_mine.png"` |
+| `tap_ex` | `SpriteDefinition` | `"tap_ex.png"` |
+
+---
+
+## Star音符图像
+
+Star音符（即 Slide 的星星头）及其变体的图像。
+
+| 属性 | 类型 | 默认路径 |
+|----------|------|---------|
+| `star` | `SpriteDefinition` | `"star.png"` |
+| `star_alt` | `SpriteDefinition` | `"star_alt.png"` |
+| `star_each` | `SpriteDefinition` | `"star_each.png"` |
+| `star_break` | `SpriteDefinition` | `"star_break.png"` |
+| `star_mine` | `SpriteDefinition` | `"star_mine.png"` |
+| `star_ex` | `SpriteDefinition` | `"star_ex.png"` |
+
+---
+
+## Hold音符图像
+
+Hold音符 及其变体的图像。
+
+| 属性 | 类型 | 默认路径 |
+|----------|------|---------|
+| `hold` | `SpriteDefinition` | `"hold.png"` |
+| `hold_each` | `SpriteDefinition` | `"hold_each.png"` |
+| `hold_break` | `SpriteDefinition` | `"hold_break.png"` |
+| `hold_mine` | `SpriteDefinition` | `"hold_mine.png"` |
+| `hold_slide` | `SpriteDefinition` | `"hold_slide.png"` |
+| `hold_ex` | `SpriteDefinition` | `"hold_ex.png"` |
+| `hold_active` | `SpriteDefinition` | `"hold_active.png"` |
+| `hold_each_active` | `SpriteDefinition` | `"hold_each_active.png"` |
+| `hold_break_active` | `SpriteDefinition` | `"hold_break_active.png"` |
+| `hold_mine_active` | `SpriteDefinition` | `"hold_mine_active.png"` |
+| `hold_slide_active` | `SpriteDefinition` | `"hold_slide_active.png"` |
+
+---
+
+## Touch音符图像
+
+Touch音符 及其变体的图像。
+
+| 属性 | 类型 | 默认路径 |
+|----------|------|---------|
+| `touch` | `SpriteDefinition` | `"touch.png"` |
+| `touch_each` | `SpriteDefinition` | `"touch_each.png"` |
+| `touch_break` | `SpriteDefinition` | `"touch_break.png"` |
+| `touch_mine` | `SpriteDefinition` | `"touch_mine.png"` |
+| `touch_hit` | `SpriteDefinition` | `"touch_hit.png"` |
+| `touch_stack` | `SpriteDefinition` | `"touch_stack.png"` |
+| `touch_star` | `SpriteDefinition` | `"touch_star.png"` |
+| `touch_star_alt` | `SpriteDefinition` | `"touch_star_alt.png"` |
+| `touch_star_each` | `SpriteDefinition` | `"touch_star_each.png"` |
+| `touch_star_break` | `SpriteDefinition` | `"touch_star_break.png"` |
+| `touch_star_mine` | `SpriteDefinition` | `"touch_star_mine.png"` |
+| `touch_star_hit` | `SpriteDefinition` | `"touch_star_hit.png"` |
+
+---
+
+## Touch Hold图像
+
+Touch Hold音符 及其变体的图像。
+
+| 属性 | 类型 | 默认路径 |
+|----------|------|---------|
+| `touch_hold_tr` | `SpriteDefinition` | `"touch_hold_tr.png"` |
+| `touch_hold_br` | `SpriteDefinition` | `"touch_hold_br.png"` |
+| `touch_hold_bl` | `SpriteDefinition` | `"touch_hold_bl.png"` |
+| `touch_hold_tl` | `SpriteDefinition` | `"touch_hold_tl.png"` |
+| `touch_hold_break` | `SpriteDefinition` | `"touch_hold_break.png"` |
+| `touch_hold_mine` | `SpriteDefinition` | `"touch_hold_mine.png"` |
+| `touch_hold_bg` | `SpriteDefinition` | `"touch_hold_bg.png"` |
+| `touch_hold_break_bg` | `SpriteDefinition` | `"touch_hold_break_bg.png"` |
+| `touch_hold_mine_bg` | `SpriteDefinition` | `"touch_hold_mine_bg.png"` |
+
+---
+
+## Touch圆点图像
+
+Touch音符 及其变体的中心圆点的图像。
+
+| 属性 | 类型 | 默认路径 |
+|----------|------|---------|
+| `touch_dot` | `SpriteDefinition` | `"touch_dot.png"` |
+| `touch_dot_each` | `SpriteDefinition` | `"touch_dot_each.png"` |
+| `touch_dot_break` | `SpriteDefinition` | `"touch_dot_break.png"` |
+| `touch_dot_mine` | `SpriteDefinition` | `"touch_dot_mine.png"` |
+
+---
+
+## Slide箭头图像
+
+沿 Slide轨迹 显示的箭头图像。
+
+| 属性 | 类型 | 默认路径 |
+|----------|------|---------|
+| `arrow` | `SpriteDefinition` | `"arrow.png"` |
+| `arrow_each` | `SpriteDefinition` | `"arrow_each.png"` |
+| `arrow_break` | `SpriteDefinition` | `"arrow_break.png"` |
+
+---
+
+## 扇形Slide图像
+
+沿 扇形Slide 轨迹显示的图像。
+
+| 属性 | 类型 | 默认值 |
+|----------|------|---------|
+| `fan` | `SpriteDefinition` | `{ "path": "fan.png", "ppu": 58 }` |
+| `fan_each` | `SpriteDefinition` | `{ "path": "fan_each.png", "ppu": 58 }` |
+| `fan_break` | `SpriteDefinition` | `{ "path": "fan_break.png", "ppu": 58 }` |
+| `fan_erosion` | `SpriteDefinition` | `{ "path": "fan_erosion.png", "ppu": 58 }` |
+
+---
+
+## SpriteDefinition 类型
+
+每个图像属性都使用 `SpriteDefinition` 类型，包含以下字段:
+
+| 属性 | 类型 | 默认值 |描述 |
+|----------|------|---------|-------------|
+| `path` | `string` | 无 | 图像文件在皮肤文件夹内的相对路径。 |
+| `ppu` | `float` | `200` | 游戏内每单位像素数。值越小，图像显示越大。值为 100 表示每单位包含100个像素点。 |
+| `pivot_x` | `float` | `0` | 精灵的水平轴心点，值从 0（左）到 1（右）。值为 0.5 时水平轴心居中。 |
+| `pivot_y` | `float` | `0` | 精灵的垂直轴心点，值从 0（下）到 1（上）。值为 0.5 时垂直轴心居中。 |
+| `top` | `float` | `0` | 用于九宫格图像的上边框，以像素为单位从顶部边缘测量。 |
+| `bottom` | `float` | `0` | 用于九宫格图像的下边框，以像素为单位从底部边缘测量。 |
+
+<Callout type="info">
+
+    支持的图像格式与 Unity 的 `Texture2D.LoadImage` 方法所支持的格式相同，包括 PNG、JPEG 及其他常见格式。
+
+</Callout>
+
+---
+
+## 示例
