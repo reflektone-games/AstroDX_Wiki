@@ -1,0 +1,74 @@
+---
+title: Frequently Asked Questions
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+
+### Common Issues
+
+<Accordions type="single">
+
+    <Accordion title="Error: `IOException: Permission denied`">
+
+        This is most likely an issue with your file manager having elevated permissions, making AstroDX unable to read levels modified with it.
+        To fix this issue, use our new recommended method on https://wiki.astrodx.com/en/install/android
+
+    </Accordion>
+
+</Accordions>
+
+### Android Installation
+
+<Accordions type="single">
+
+    <Accordion title="Updating from 1.x">
+        1. Backup your levels, along with the chart-meta.fufu file to a location outside of com.Reflektone.MaipadDX
+        2. Uninstall the game
+        3. Install 2.0, open the game at least once
+        4. Close the game
+        5. Migrate your levels to com.Reflektone.AstroDX/files/levels/
+        6. Copy your chart-meta.fufu inside com.Reflektone.AstroDX/files/ (make a backup just in case conversion fails)
+        7. Start the game
+    </Accordion>
+
+    <Accordion title="Updating from 2.0.0.beta.pre.89 to 2.0.0.beta.pre.90+">
+        1. Backup your levels, along with the cache file to a location outside of com.Reflektone.AstroDX
+        2. Uninstall the game
+        3. Install the newer version, open the game at least once
+        4. Close the game
+        5. Migrate all the files back
+        6. Start the game
+    </Accordion>
+
+    <Accordion title="Updating from 2.0.0.beta.pre.98 to the latest version">
+        To migrate your scores properly, download, install and launch a checkpoint version.
+
+        1. Download 2.0.0.beta.2.patch.8
+        2. Install and launch the update
+        3. Download the latest version of the game
+        4. Install and launch the game
+    </Accordion>
+
+</Accordions>
+
+### Error Reporting
+
+<Accordions type="single">
+
+    <Accordion title="Where do I report bugs?">
+
+        You can send an issue to us through [GitHub](https://github.com/2394425147/astrodx/issues/new/choose).
+
+    </Accordion>
+
+    <Accordion title="How do I find the full error log?">
+
+        The error log is stored in the local game files.
+
+        On Android, it's stored in `/sdcard/Android/data/com.Reflektone.AstroDX/files/`.
+
+        On iOS, it's stored in the Files app -> On My iPad/iPhone -> AstroDX.
+
+    </Accordion>
+
+</Accordions>
